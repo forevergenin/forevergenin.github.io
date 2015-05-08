@@ -1,2 +1,7 @@
+# ignore temporary files created by jekyll
 _site
 .sass-cache
+
+# ignore temporary files created by Mac OS X
+.DS_Store
+
