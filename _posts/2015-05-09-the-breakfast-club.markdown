@@ -2,6 +2,7 @@
 layout: post
 title: The Breakfast Club
 date: 2015-05-09T00:12:40+05:30
+last-updated:
 author: Premkumar Subramanian
 categories: rants
 tags: appraisal office rant
