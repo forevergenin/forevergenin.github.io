@@ -2,6 +2,7 @@
 layout: {{ layout }}
 title: {{ title }}
 published: false
+author: ç
 categories: {{ categories }}
 tags: {{ tags }}
 ---

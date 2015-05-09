@@ -3,6 +3,8 @@ layout: {{ layout }}
 title: {{ title }}
 published: true
 date: {{ date }}
+last-updated: {{ last-updated }}
+author: Premkumar Subramanian
 categories: {{ categories }}
 tags: {{ tags }}
 ---
