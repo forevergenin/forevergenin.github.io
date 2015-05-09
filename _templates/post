@@ -1,5 +1,8 @@
 ---
 layout: {{ layout }}
 title: {{ title }}
+published: true
 date: {{ date }}
+categories: {{ categories }}
+tags: {{ tags }}
 ---

@@ -1,4 +1,7 @@
 ---
 layout: {{ layout }}
 title: {{ title }}
+published: false
+categories: {{ categories }}
+tags: {{ tags }}
 ---
