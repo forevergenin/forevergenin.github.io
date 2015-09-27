@@ -55,6 +55,7 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 040. Tate no Yuusha no Nariagari [14](http://www.mangapanda.com/tate-no-yuusha-no-nariagari/14)
 041. Tale of Eun Aran [63](http://www.mangapanda.com/tale-of-eun-aran/63)
 042. Abide in the Wind [4](http://www.mangatown.com/manga/abide_in_the_wind/c004/4.html)
+043. Fairy Tail Gaiden - Kengami no Souryuu [0](http://www.mangapanda.com/fairy-tail-gaiden-kengami-no-souryuu)
 
 
 ## Completed:
