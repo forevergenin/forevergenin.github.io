@@ -56,6 +56,10 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 041. Tale of Eun Aran [63](http://www.mangapanda.com/tale-of-eun-aran/63)
 042. Abide in the Wind [4](http://www.mangatown.com/manga/abide_in_the_wind/c004/4.html)
 043. Fairy Tail Gaiden - Kengami no Souryuu [0](http://www.mangapanda.com/fairy-tail-gaiden-kengami-no-souryuu)
+044. Tale of the Fighting Freak, Path of the Warrior - Blood and Steel [3](http://www.mangapanda.com/tale-of-the-fighting-freak-path-of-the-warrior-blood-and-steel/3)
+045. City of Dead Sorcerer [101](http://www.mangapanda.com/city-of-dead-sorcerer/101)
+046. Onepunch Man [82](http://www.mangapanda.com/onepunch-man/82)
+047. Shingeki no Kyojin - Lost Girls [2](http://www.mangareader.net/shingeki-no-kyojin-lost-girls/2)
 
 
 ## Completed:
