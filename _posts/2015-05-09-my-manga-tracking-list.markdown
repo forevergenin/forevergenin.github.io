@@ -4,7 +4,7 @@ title: My Manga Tracking List
 published: true
 date: 2015-05-09T14:19:04+05:30
 last-updated:
-author: Premkumar Subramanian
+author: PS
 categories: manga
 tags: addiction manga manhwa
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Quotes and Passages from Man's Search for Meaning
 published: false
-author: Premkumar Subramanian
+author: PS
 categories: quotes
 tags: quote reading
 ---

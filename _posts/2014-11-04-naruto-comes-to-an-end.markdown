@@ -3,7 +3,7 @@ layout: post
 title:  "Naruto comes to an end"
 date:   2014-11-04 21:11:17
 last-updated:
-author: Premkumar Subramanian
+author: PS
 categories: manga
 tags: naruto manga
 ---

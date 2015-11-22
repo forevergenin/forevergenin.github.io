@@ -4,7 +4,7 @@ title: {{ title }}
 published: true
 date: {{ date }}
 last-updated: {{ last-updated }}
-author: Premkumar Subramanian
+author: PS
 categories: {{ categories }}
 tags: {{ tags }}
 ---
