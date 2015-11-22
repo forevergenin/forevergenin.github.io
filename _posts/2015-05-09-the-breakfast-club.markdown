@@ -12,7 +12,7 @@ tags: appraisal office rant
 
 >Does that answer your question? Sincerely yours, [the Breakfast Club][1].
 
-Dedicated to my Manager ;-)
+Dedicated to all my Managers ;-)
 
 \#YearEnd \#GoalSetting \#SelfAppraisal \#PeerReview \#Rating
 
