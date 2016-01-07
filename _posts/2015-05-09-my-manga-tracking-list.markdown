@@ -24,7 +24,7 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 009. Witch Hunter [139](http://www.mangareader.net/witch-hunter/139)
 010. Toriko [311](http://www.mangapanda.com/toriko/311)
 011. Berserk [340](http://www.mangahere.com/manga/berserk/c340)
-012. The Breaker: New Waves [201](http://www.mangareader.net/the-breaker-new-waves/201)
+012. Kingdom [247](http://www.mangapanda.com/kingdom)
 013. Ao No Exorcist [64](http://www.mangareader.net/ao-no-exorcist/64)
 014. Freezing [174](http://www.mangareader.net/freezing/174)
 015. Tokyo Ghoul:re [22](http://mangafox.me/manga/tokyo_ghoul_re/22)
@@ -125,6 +125,7 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 060. [Pandora Hearts](http://www.mangareader.net/pandora-hearts)
 061. [Sankarea](http://www.mangareader.net/sankarea)
 062. [Fairy Tail Blue Mistral](http://www.mangapanda.com/fairy-tail-blue-mistral)
+063. [The Breaker: New Waves](http://www.mangareader.net/the-breaker-new-waves)
 
 ## Discontinued:
 
