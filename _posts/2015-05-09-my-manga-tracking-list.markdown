@@ -13,7 +13,7 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 
 ## Currently Reading:
 
-001. One Piece [819](http://www.mangareader.net/one-piece/819)
+001. One Piece [821](http://www.mangareader.net/one-piece/821)
 002. Shaman King Flowers [30](http://mangafox.me/manga/shaman_king_flowers/30)
 003. Fairy Tail [477](http://www.mangareader.net/fairy-tail/477)
 004. Noblesse [397](http://www.mangareader.net/noblesse/397)
@@ -26,10 +26,10 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 011. Berserk [344](http://www.mangareader.net/berserk/344)
 012. Kingdom [466](http://www.mangapanda.com/kingdom/466)
 013. Ao No Exorcist [76](http://www.mangareader.net/ao-no-exorcist/76)
-014. Freezing [199](http://www.mangareader.net/freezing/199)
+014. Freezing [201](http://www.mangareader.net/freezing/201)
 015. Tokyo Ghoul:re [68](http://www.mangareader.net/tokyo-ghoulre/68)
-016. Magi [297](http://www.mangapanda.com/magi/297)
-017. Nanatsu no Taizai [166](http://www.mangareader.net/nanatsu-no-taizai/166)
+016. Magi [299](http://www.mangapanda.com/magi/299)
+017. Nanatsu no Taizai [167](http://www.mangareader.net/nanatsu-no-taizai/167)
 018. Cavalier Of The Abyss [135](http://www.mangareader.net/cavalier-of-the-abyss/135)
 019. Girls of the Wild's [226](http://www.mangareader.net/girls-of-the-wilds/226)
 020. Sekirei [177](http://www.mangareader.net/sekirei/177)
@@ -38,7 +38,7 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 023. Soul Eater Not! [20](http://www.mangareader.net/soul-eater-not/20)
 024. Shingeki no Kyojin - Lost Girls [2](http://www.mangareader.net/shingeki-no-kyojin-lost-girls/2)
 025. Freezing Zero [33](http://www.mangareader.net/freezing-zero/33)
-026. Nisekoi [209](http://www.mangareader.net/nisekoi/209)
+026. Nisekoi [210](http://www.mangareader.net/nisekoi/210)
 027. The Gamer [124](http://www.mangapanda.com/the-gamer/124)
 028. The God of High School Manga [251](http://www.mangapanda.com/the-god-of-high-school/251)
 020. Shingeki no Kyojin [80](http://www.mangareader.net/shingeki-no-kyojin/80)
@@ -59,6 +59,11 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 044. Tale of the Fighting Freak, Path of the Warrior - Blood and Steel [3](http://www.mangapanda.com/tale-of-the-fighting-freak-path-of-the-warrior-blood-and-steel/3)
 045. City of Dead Sorcerer [125](http://www.mangapanda.com/city-of-dead-sorcerer/125)
 046. Onepunch Man [96](http://www.mangapanda.com/onepunch-man/96)
+047. Monster x Monster [15](http://www.mangapanda.com/monster-x-monster/15)
+048. Skill of Lure [6](http://www.mangapanda.com/skill-of-lure/6)
+049. Cerberus [0](http://mangafox.me/manga/cerberus/)
+050. Tales of Demons and Gods [62](http://www.mangapanda.com/tales-of-demons-and-gods/62)
+051. Adventures of Sindbad - Prototype [31](http://www.mangapanda.com/adventure-of-sinbad-prototype/31/14)
 
 ## Completed:
 
@@ -87,7 +92,7 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 023. [GE - Good Ending](http://www.mangareader.net/738/ge-good-ending.html)
 024. [Cage of Eden](http://www.mangareader.net/213/cage-of-eden.html)
 025. [Nurarihyon No Mago](http://www.mangareader.net/456/nurarihyon-no-mago.html)
-026. [Break Blade](http://www.mangareader.net/1049/break-blade.html)
+026. [Veritas](http://www.mangapanda.com/veritas)
 027. [Soul Eater](http://www.mangareader.net/157/soul-eater.html)
 028. [Hungry Joker](http://www.mangareader.net/hungry-joker)
 029. [Utsurowazarumono - Breath of Fire IV](http://www.mangareader.net/984/utsurowazarumono-breath-of-fire-iv.html)
