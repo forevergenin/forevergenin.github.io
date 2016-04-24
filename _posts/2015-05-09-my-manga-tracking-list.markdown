@@ -130,6 +130,7 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 062. [Fairy Tail Blue Mistral](http://www.mangapanda.com/fairy-tail-blue-mistral)
 063. [The Breaker: New Waves](http://www.mangareader.net/the-breaker-new-waves)
 064. [Rock Lee's Springtime of Youth](http://www.mangareader.net/rock-lees-springtime-of-youth)
+065. [Ranma 1/2](http://www.mangapanda.com/ranma-12)
 
 ## Discontinued:
 
