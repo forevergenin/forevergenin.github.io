@@ -10,10 +10,9 @@ github_username:  forevergenin
 timezone: Asia/Kolkata
 
 # Build settings
-# markdown: kramdown
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+markdown: kramdown
+kramdown:
+  input: GFM
 
 ## Octopress settings
 
