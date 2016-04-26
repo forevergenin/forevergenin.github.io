@@ -19,7 +19,7 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 004. Noblesse [397](http://www.mangareader.net/noblesse/397)
 005. Bleach [665](http://www.mangareader.net/bleach/665)
 006. D.Gray-Man [222](http://www.mangareader.net/dgray-man/222)
-007. Assassination Classroom [179](http://www.mangareader.net/assassination-classroom/179)
+007. Adventures of Sindbad - Prototype [31](http://www.mangapanda.com/adventure-of-sinbad-prototype/31/14)
 008. Blood and Steel [70](http://www.mangareader.net/blood-and-steel/70)
 009. Witch Hunter [159](http://www.mangareader.net/witch-hunter/159)
 010. Toriko [362](http://www.mangapanda.com/toriko/362)
@@ -63,7 +63,6 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 048. Skill of Lure [6](http://www.mangapanda.com/skill-of-lure/6)
 049. Cerberus [0](http://mangafox.me/manga/cerberus/)
 050. Tales of Demons and Gods [62](http://www.mangapanda.com/tales-of-demons-and-gods/62)
-051. Adventures of Sindbad - Prototype [31](http://www.mangapanda.com/adventure-of-sinbad-prototype/31/14)
 
 ## Completed:
 
@@ -131,6 +130,8 @@ This is my official track list for all the Mangas/Manhwas I have completed or cu
 063. [The Breaker: New Waves](http://www.mangareader.net/the-breaker-new-waves)
 064. [Rock Lee's Springtime of Youth](http://www.mangareader.net/rock-lees-springtime-of-youth)
 065. [Ranma 1/2](http://www.mangapanda.com/ranma-12)
+066. [Assassination Classroom](http://www.mangareader.net/assassination-classroom)
+067. [Assasination Classroom Extra](http://www.mangapanda.com/assassination-classroom-extra)
 
 ## Discontinued:
 
