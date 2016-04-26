@@ -1,5 +1,6 @@
 # Site settings
-title: Forever Genin
+title: forevergenin
+tagline:
 email: hello@forevergenin.com
 description: > # this means to ignore newlines until "baseurl:"
   Powered by GitHub
@@ -8,13 +9,15 @@ url: "http://www.forevergenin.com" # the base hostname & protocol for your site
 twitter_username: forevergenin
 github_username:  forevergenin
 timezone: Asia/Kolkata
+paginate: 5
 
 # Build settings
+gems: [jekyll-paginate]
 markdown: kramdown
 kramdown:
   input: GFM
 
-## Octopress settings
+### Begin Octopress settings
 
 # Default extension for new posts and pages
 post_ext: markdown
@@ -32,3 +35,5 @@ titlecase: true
 post_template: post
 page_template: page
 draft_template: draft
+
+### End Octopress settings
