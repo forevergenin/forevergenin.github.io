@@ -1,8 +1,0 @@
----
-layout: {{ layout }}
-title: {{ title }}
-date: {{ date }}
-last-updated: {{ last-updated }}
-categories: {{ categories }}
-tags: {{ tags }}
----

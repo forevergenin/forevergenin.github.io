@@ -1,8 +1,0 @@
----
-layout: {{ layout }}
-title: {{ title }}
-published: false
-author: PS
-categories: {{ categories }}
-tags: {{ tags }}
----
