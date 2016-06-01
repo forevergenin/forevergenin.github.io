@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.15" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Marcellus+SC'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/atelier-estuary-dark.min.css">
+    <link rel="stylesheet" href="http://www.forevergenin.com/css/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.forevergenin.com//index.xml">
+
+    
+    <title>Distro independent Java development environment setup - forevergenin</title>
+    <meta property='og:title' content="Distro independent Java development environment setup - forevergenin">
+    <meta property="og:type" content="article">
+    
+
+    <meta property="og:url" content="http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/">
+    
+    
+
+  </head>
+
+  <body>
+
+    <header class="site">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.forevergenin.com/">forevergenin</a>
+          </div>
+
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="http://www.forevergenin.com/">home</a></li>
+              
+              
+              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">personal <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  
+                  <li><a href="http://www.forevergenin.com/pages/my-manga-tracking-list/">my manga tracking list</a></li>
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <div class="site">
+      <div class="container">
+
+
+
+<div class="single">
+
+  <div class="row">
+    <div class="col-md-8">
+
+      <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+        <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://www.forevergenin.com/"/>
+        <meta itemprop="dateModified" content="2016-06-01T13:54:56&#43;05:30">
+        <meta itemprop="headline" content="Distro independent Java development environment setup">
+        <meta itemprop="description" content="Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as Canonical&rsquo;s partner repository ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default.">
+        <meta itemprop="url" content="http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/">
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="http://www.forevergenin.com/images/default.jpg" />
+          <meta itemprop="width" content="800">
+          <meta itemprop="height" content="800">
+        </div>
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://www.forevergenin.com/images/logo.jpg">
+            <meta itemprop="width" content="100">
+            <meta itemprop="height" content="100">
+          </div>
+          <meta itemprop="name" content="forevergenin">
+        </div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="">
+        </div>
+
+        <header class="article-header">
+          <time itemprop="datePublished" pubdate="pubdate" datetime="2016-06-01T13:54:56&#43;05:30">Wed, Jun 1, 2016</time>
+          <h1 class="article-title">Distro independent Java development environment setup</h1>
+        </header>
+
+        <div class="article-body" itemprop="articleBody">
+          <p>Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as <a href="https://help.ubuntu.com/community/Repositories/Ubuntu#Adding_Canonical_Partner_Repositories" title="Canonical Partner Repositories">Canonical&rsquo;s partner repository</a> ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default. Setting up Java development environment manually from scratch on linux has become a tedious job (though still easier doing tha on Microsoft Windows). Nowadays I avoid doing it, given a chance to use a preconfigured virtual machines or chroot tar balls  - created specifically for development/build requirements.</p>
+
+<p>As for the intent of this post, it is to serve as a guide on best practices of setting up a Java development / build environment from scratch if such need arises in the future.</p>
+
+<p><strong>Prerequisites:</strong></p>
+
+<ol>
+<li>Oracle JDK version of your choice (in our case v1.7.0<em>79</em>)</li>
+<li>Apache Ant version of your choice (in our case 1.9.7) )which works with the JDK version chosen in step 1</li>
+<li>Apache Maven version of your choice (in our case 3.0.5) which works with the JDK version chosen in step 1</li>
+<li>Gradle version of your choice (in our case 2.13) which works with the JDK version chosen in step 1</li>
+</ol>
+
+<p>Download tar ball archives of all the above packages. RPM package is available for Oracle JDK but it kills the &ldquo;distro independent&rdquo; part of this post.</p>
+
+<p>Extract all the tar balls to a location of your convenience. If I have root or sudo access (which happens to be most of the time), I usually prefer <code>/opt/tools/java</code>.</p>
+
+<p>After completing the extraction of tarballs to the <code>/opt/tools/java</code> direcory add the environment config scripts based on the below given template to <code>/etc/profile.d</code> directory of you linux file system.</p>
+
+<p><script src="//gist.github.com/forevergenin/ea998e338ea85709bfd3837690cab2e9.js"></script>
+<script src="//gist.github.com/forevergenin/16b8c2a435e42e440657a6a4608a6f11.js"></script>
+<script src="//gist.github.com/forevergenin/f6a99b87eb0f324d0291a0fbae55eb09.js"></script>
+<script src="//gist.github.com/forevergenin/15db13908919368ba9019717886aa1e5.js"></script></p>
+
+<p>At the end of the setup, your <code>/etc/profile.d</code> directory should look something like this</p>
+
+<pre><code class="language-bash">/etc/profile.d
+├── 00700_java_home.sh
+├── 00701_ant_home.sh
+├── 00702_m2_home.sh
+└── 00703_gradle_home.sh
+</code></pre>
+
+<p>And your <code>/opt/tools/java</code> should look something like this</p>
+
+<pre><code class="language-bash">/opt/tools/java
+├── apache-ant-1.9.7
+├── apache-maven-3.0.5
+├── gradle-2.13
+└── jdk1.7.0_79
+</code></pre>
+
+        </div>
+
+
+        <aside>
+          <div class="section"><a href="http://www.forevergenin.com/tags/linux" class="tag">linux</a> <a href="http://www.forevergenin.com/tags/java" class="tag">java</a> <a href="http://www.forevergenin.com/tags/development" class="tag">development</a> <a href="http://www.forevergenin.com/tags/maven" class="tag">maven</a> <a href="http://www.forevergenin.com/tags/ant" class="tag">ant</a> <a href="http://www.forevergenin.com/tags/apache" class="tag">apache</a> <a href="http://www.forevergenin.com/tags/gradle" class="tag">gradle</a> <a href="http://www.forevergenin.com/tags/build" class="tag">build</a> <a href="http://www.forevergenin.com/tags/environment" class="tag">environment</a> </div>
+
+          <div class="section share">
+            <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2fwww.forevergenin.com%2fposts%2flinux%2fdistro-independent-java-development-environment-setup%2f&t=Distro%20independent%20Java%20development%20environment%20setup" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2fwww.forevergenin.com%2fposts%2flinux%2fdistro-independent-java-development-environment-setup%2f&text=Distro%20independent%20Java%20development%20environment%20setup&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+            <a href="https://plus.google.com/share?url=http%3a%2f%2fwww.forevergenin.com%2fposts%2flinux%2fdistro-independent-java-development-environment-setup%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+            <a href="http://getpocket.com/edit?url=http%3a%2f%2fwww.forevergenin.com%2fposts%2flinux%2fdistro-independent-java-development-environment-setup%2f&title=Distro%20independent%20Java%20development%20environment%20setup" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+          </div>
+
+          
+          
+          
+        </aside>
+
+      </article>
+
+    </div>
+    <div class="col-md-4">
+      
+<aside class="site">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">LatestPosts</h2>
+    </div>
+    <div class="list-group">
+      
+      <a href="http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/" class="list-group-item">Distro independent Java development environment setup</a>
+      
+      <a href="http://www.forevergenin.com/posts/rants/the-breakfast-club/" class="list-group-item">The Breakfast Club</a>
+      
+      <a href="http://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/" class="list-group-item">Naruto comes to an end</a>
+      
+    </div>
+  </div>
+
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">category</h2>
+    </div>
+    <div class="list-group">
+      
+      <a href="http://www.forevergenin.com/categories/manga" class="list-group-item">manga</a>
+      
+      <a href="http://www.forevergenin.com/categories/linux" class="list-group-item">linux</a>
+      
+      <a href="http://www.forevergenin.com/categories/rants" class="list-group-item">rants</a>
+      
+      <a href="http://www.forevergenin.com/categories/quotes" class="list-group-item">quotes</a>
+      
+      <a href="http://www.forevergenin.com/categories/java" class="list-group-item">java</a>
+      
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">tag</h2>
+    </div>
+    <div class="list-group">
+      
+      <a href="http://www.forevergenin.com/tags/manga" class="list-group-item">manga</a>
+      
+      <a href="http://www.forevergenin.com/tags/quotes" class="list-group-item">quotes</a>
+      
+      <a href="http://www.forevergenin.com/tags/naruto" class="list-group-item">naruto</a>
+      
+      <a href="http://www.forevergenin.com/tags/development" class="list-group-item">development</a>
+      
+      <a href="http://www.forevergenin.com/tags/environment" class="list-group-item">environment</a>
+      
+      <a href="http://www.forevergenin.com/tags/gradle" class="list-group-item">gradle</a>
+      
+      <a href="http://www.forevergenin.com/tags/manhwa" class="list-group-item">manhwa</a>
+      
+      <a href="http://www.forevergenin.com/tags/the-breakfast-club" class="list-group-item">the-breakfast-club</a>
+      
+      <a href="http://www.forevergenin.com/tags/linux" class="list-group-item">linux</a>
+      
+      <a href="http://www.forevergenin.com/tags/java" class="list-group-item">java</a>
+      
+    </div>
+  </div>
+  
+
+</aside>
+
+
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site">
+      <div class="container">
+        <p>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</p>
+        <p>Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a>, Theme <a href="https://github.com/dim0627/hugo_theme_beg" target="_blank" rel="nofollow">beg</a> designed by <a href="http://yet.unresolved.xyz" target="_blank" rel="nofollow">Daisuke Tsuji</a></p>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+	
+	<script>$(function() { $('table').addClass('table table-striped'); })</script>
+	
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-77041142-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
+

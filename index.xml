@@ -7,8 +7,58 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 May 2015 14:19:04 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jun 2016 13:54:56 +0530</lastBuildDate>
     <atom:link href="http://www.forevergenin.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Distro independent Java development environment setup</title>
+      <link>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</link>
+      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
+      
+      <guid>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</guid>
+      <description>&lt;p&gt;Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as &lt;a href=&#34;https://help.ubuntu.com/community/Repositories/Ubuntu#Adding_Canonical_Partner_Repositories&#34; title=&#34;Canonical Partner Repositories&#34;&gt;Canonical&amp;rsquo;s partner repository&lt;/a&gt; ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default. Setting up Java development environment manually from scratch on linux has become a tedious job (though still easier doing tha on Microsoft Windows). Nowadays I avoid doing it, given a chance to use a preconfigured virtual machines or chroot tar balls  - created specifically for development/build requirements.&lt;/p&gt;
+
+&lt;p&gt;As for the intent of this post, it is to serve as a guide on best practices of setting up a Java development / build environment from scratch if such need arises in the future.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prerequisites:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Oracle JDK version of your choice (in our case v1.7.0&lt;em&gt;79&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Apache Ant version of your choice (in our case 1.9.7) )which works with the JDK version chosen in step 1&lt;/li&gt;
+&lt;li&gt;Apache Maven version of your choice (in our case 3.0.5) which works with the JDK version chosen in step 1&lt;/li&gt;
+&lt;li&gt;Gradle version of your choice (in our case 2.13) which works with the JDK version chosen in step 1&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Download tar ball archives of all the above packages. RPM package is available for Oracle JDK but it kills the &amp;ldquo;distro independent&amp;rdquo; part of this post.&lt;/p&gt;
+
+&lt;p&gt;Extract all the tar balls to a location of your convenience. If I have root or sudo access (which happens to be most of the time), I usually prefer &lt;code&gt;/opt/tools/java&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;After completing the extraction of tarballs to the &lt;code&gt;/opt/tools/java&lt;/code&gt; direcory add the environment config scripts based on the below given template to &lt;code&gt;/etc/profile.d&lt;/code&gt; directory of you linux file system.&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&#34;//gist.github.com/forevergenin/ea998e338ea85709bfd3837690cab2e9.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//gist.github.com/forevergenin/16b8c2a435e42e440657a6a4608a6f11.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//gist.github.com/forevergenin/f6a99b87eb0f324d0291a0fbae55eb09.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//gist.github.com/forevergenin/15db13908919368ba9019717886aa1e5.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;At the end of the setup, your &lt;code&gt;/etc/profile.d&lt;/code&gt; directory should look something like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/etc/profile.d
+├── 00700_java_home.sh
+├── 00701_ant_home.sh
+├── 00702_m2_home.sh
+└── 00703_gradle_home.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And your &lt;code&gt;/opt/tools/java&lt;/code&gt; should look something like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/opt/tools/java
+├── apache-ant-1.9.7
+├── apache-maven-3.0.5
+├── gradle-2.13
+└── jdk1.7.0_79
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>My Manga Tracking List</title>
@@ -23,56 +73,51 @@
 &lt;h2 id=&#34;currently-reading:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Currently Reading:&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;One Piece &lt;a href=&#34;http://www.mangareader.net/one-piece/821&#34;&gt;821&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Shaman King Flowers &lt;a href=&#34;http://mangafox.me/manga/shaman_king_flowers/30&#34;&gt;30&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fairy Tail &lt;a href=&#34;http://www.mangareader.net/fairy-tail/477&#34;&gt;477&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Noblesse &lt;a href=&#34;http://www.mangareader.net/noblesse/397&#34;&gt;397&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bleach &lt;a href=&#34;http://www.mangareader.net/bleach/665&#34;&gt;665&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;D.Gray-Man &lt;a href=&#34;http://www.mangareader.net/dgray-man/222&#34;&gt;222&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Adventures of Sindbad - Prototype &lt;a href=&#34;http://www.mangapanda.com/adventure-of-sinbad-prototype/31/14&#34;&gt;31&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Blood and Steel &lt;a href=&#34;http://www.mangareader.net/blood-and-steel/70&#34;&gt;70&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;One Piece &lt;a href=&#34;http://www.mangareader.net/one-piece/826&#34;&gt;826&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tales of Demons and Gods &lt;a href=&#34;http://www.mangapanda.com/tales-of-demons-and-gods/70&#34;&gt;70&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fairy Tail &lt;a href=&#34;http://www.mangareader.net/fairy-tail/484&#34;&gt;484&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Noblesse &lt;a href=&#34;http://www.mangareader.net/noblesse/405&#34;&gt;405&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bleach &lt;a href=&#34;http://www.mangareader.net/bleach/573&#34;&gt;573&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;D.Gray-Man &lt;a href=&#34;http://www.mangareader.net/dgray-man/223&#34;&gt;223&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adventures of Sindbad - Prototype &lt;a href=&#34;http://www.mangapanda.com/adventure-of-sinbad-prototype/103&#34;&gt;103&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blood and Steel &lt;a href=&#34;http://www.mangareader.net/blood-and-steel/71&#34;&gt;71&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Witch Hunter &lt;a href=&#34;http://www.mangareader.net/witch-hunter/159&#34;&gt;159&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Toriko &lt;a href=&#34;http://www.mangapanda.com/toriko/362&#34;&gt;362&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Toriko &lt;a href=&#34;http://www.mangapanda.com/toriko/370&#34;&gt;370&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Berserk &lt;a href=&#34;http://www.mangareader.net/berserk/344&#34;&gt;344&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Kingdom &lt;a href=&#34;http://www.mangapanda.com/kingdom/466&#34;&gt;466&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Ao No Exorcist &lt;a href=&#34;http://www.mangareader.net/ao-no-exorcist/76&#34;&gt;76&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Freezing &lt;a href=&#34;http://www.mangareader.net/freezing/201&#34;&gt;201&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tokyo Ghoul:re &lt;a href=&#34;http://www.mangareader.net/tokyo-ghoulre/68&#34;&gt;68&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Magi &lt;a href=&#34;http://www.mangapanda.com/magi/299&#34;&gt;299&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Nanatsu no Taizai &lt;a href=&#34;http://www.mangareader.net/nanatsu-no-taizai/167&#34;&gt;167&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Kingdom &lt;a href=&#34;http://www.mangapanda.com/kingdom/472&#34;&gt;472&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ao No Exorcist &lt;a href=&#34;http://www.mangareader.net/ao-no-exorcist/79&#34;&gt;79&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Freezing &lt;a href=&#34;http://www.mangareader.net/freezing/202&#34;&gt;202&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tokyo Ghoul:re &lt;a href=&#34;http://www.mangareader.net/tokyo-ghoulre/75&#34;&gt;75&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Magi &lt;a href=&#34;http://www.mangapanda.com/magi/301&#34;&gt;301&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Nanatsu no Taizai &lt;a href=&#34;http://www.mangareader.net/nanatsu-no-taizai/173&#34;&gt;173&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cavalier Of The Abyss &lt;a href=&#34;http://www.mangareader.net/cavalier-of-the-abyss/135&#34;&gt;135&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Girls of the Wild&amp;rsquo;s &lt;a href=&#34;http://www.mangareader.net/girls-of-the-wilds/226&#34;&gt;226&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Sekirei &lt;a href=&#34;http://www.mangareader.net/sekirei/177&#34;&gt;177&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Hunter X Hunter &lt;a href=&#34;http://www.mangapanda.com/hunter-x-hunter/350&#34;&gt;350&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A Thousand Years Ninetails &lt;a href=&#34;http://www.mangareader.net/a-thousand-years-ninetails/82&#34;&gt;82&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Soul Eater Not! &lt;a href=&#34;http://www.mangareader.net/soul-eater-not/20&#34;&gt;20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Girls of the Wild&amp;rsquo;s &lt;a href=&#34;http://www.mangareader.net/girls-of-the-wilds/234&#34;&gt;234&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sekirei &lt;a href=&#34;http://www.mangareader.net/sekirei/179&#34;&gt;179&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hunter X Hunter &lt;a href=&#34;http://www.mangapanda.com/hunter-x-hunter/352&#34;&gt;352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A Thousand Years Ninetails &lt;a href=&#34;http://www.mangareader.net/a-thousand-years-ninetails/84&#34;&gt;84&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Onepunch Man &lt;a href=&#34;http://www.mangapanda.com/onepunch-man/99&#34;&gt;99&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Shingeki no Kyojin - Lost Girls &lt;a href=&#34;http://www.mangareader.net/shingeki-no-kyojin-lost-girls/2&#34;&gt;2&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Freezing Zero &lt;a href=&#34;http://www.mangareader.net/freezing-zero/33&#34;&gt;33&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Nisekoi &lt;a href=&#34;http://www.mangareader.net/nisekoi/210&#34;&gt;210&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Nisekoi &lt;a href=&#34;http://www.mangareader.net/nisekoi/216&#34;&gt;216&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;The Gamer &lt;a href=&#34;http://www.mangapanda.com/the-gamer/124&#34;&gt;124&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The God of High School Manga &lt;a href=&#34;http://www.mangapanda.com/the-god-of-high-school/251&#34;&gt;251&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Shingeki no Kyojin &lt;a href=&#34;http://www.mangareader.net/shingeki-no-kyojin/80&#34;&gt;80&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;King of Hell &lt;a href=&#34;http://www.mangapanda.com/king-of-hell/314&#34;&gt;314&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Kubera &lt;a href=&#34;http://www.mangapanda.com/kubera/272&#34;&gt;272&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The God of High School Manga &lt;a href=&#34;http://www.mangapanda.com/the-god-of-high-school/257&#34;&gt;257&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Shingeki no Kyojin &lt;a href=&#34;http://www.mangareader.net/shingeki-no-kyojin/81&#34;&gt;81&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;King of Hell &lt;a href=&#34;http://www.mangapanda.com/king-of-hell/316&#34;&gt;316&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Kubera &lt;a href=&#34;http://www.mangapanda.com/kubera/276&#34;&gt;276&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Highschool DxD &lt;a href=&#34;http://www.mangapanda.com/highschool-dxd/33&#34;&gt;33&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;High-School DxD: Ashia &amp;amp; Koneko Himitsu no Keiyaku!? &lt;a href=&#34;http://www.mangapanda.com/high-school-dxd-ashia-koneko-himitsu-no-keiyaku/6&#34;&gt;6&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Attack On Titan - Before The Fall &lt;a href=&#34;http://www.mangapanda.com/attack-on-titan-before-the-fall/11&#34;&gt;11&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Shingeki no Kyojin - Birth of Levi: Kuinaki Sentaku &lt;a href=&#34;http://www.mangapanda.com/shingeki-no-kyojin-birth-of-levi-kuinaki-sentaku/10&#34;&gt;10&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fairy Tail Zero &lt;a href=&#34;http://www.mangapanda.com/fairy-tail-zero/14&#34;&gt;14&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Minamoto-kun Monogatari &lt;a href=&#34;http://www.mangahere.co/manga/minamoto_kun_monogatari/c189/&#34;&gt;189&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Break Blade &lt;a href=&#34;http://www.mangapanda.com/break-blade/82&#34;&gt;82&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;City of Dead Sorcerer &lt;a href=&#34;http://www.mangapanda.com/city-of-dead-sorcerer/127&#34;&gt;127&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Minamoto-kun Monogatari &lt;a href=&#34;http://www.mangahere.co/manga/minamoto_kun_monogatari/c191/&#34;&gt;191&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Break Blade &lt;a href=&#34;http://www.mangapanda.com/break-blade/84&#34;&gt;84&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fairy Tail Blue Mistral Wendel&amp;rsquo;s Adventure &lt;a href=&#34;http://www.mangapanda.com/fairy-tail-blue-mistral-wendels-adventure/1&#34;&gt;1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tate no Yuusha no Nariagari &lt;a href=&#34;http://www.mangapanda.com/tate-no-yuusha-no-nariagari/22&#34;&gt;22&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tate no Yuusha no Nariagari &lt;a href=&#34;http://www.mangapanda.com/tate-no-yuusha-no-nariagari/24&#34;&gt;24&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Tale of Eun Aran &lt;a href=&#34;http://www.mangapanda.com/tale-of-eun-aran/83&#34;&gt;83&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Abide in the Wind &lt;a href=&#34;http://www.mangatown.com/manga/abide_in_the_wind/c004/4.html&#34;&gt;4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fairy Tail Gaiden - Kengami no Souryuu &lt;a href=&#34;http://www.mangapanda.com/fairy-tail-gaiden-kengami-no-souryuu/15&#34;&gt;15&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Tale of the Fighting Freak, Path of the Warrior - Blood and Steel &lt;a href=&#34;http://www.mangapanda.com/tale-of-the-fighting-freak-path-of-the-warrior-blood-and-steel/3&#34;&gt;3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;City of Dead Sorcerer &lt;a href=&#34;http://www.mangapanda.com/city-of-dead-sorcerer/125&#34;&gt;125&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Onepunch Man &lt;a href=&#34;http://www.mangapanda.com/onepunch-man/96&#34;&gt;96&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Monster x Monster &lt;a href=&#34;http://www.mangapanda.com/monster-x-monster/15&#34;&gt;15&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Skill of Lure &lt;a href=&#34;http://www.mangapanda.com/skill-of-lure/6&#34;&gt;6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Cerberus &lt;a href=&#34;http://mangafox.me/manga/cerberus/&#34;&gt;0&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tales of Demons and Gods &lt;a href=&#34;http://www.mangapanda.com/tales-of-demons-and-gods/62&#34;&gt;62&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ouroboros&lt;a href=&#34;http://www.mangareader.net/ouroboros/87&#34;&gt;87&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;completed:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Completed:&lt;/h2&gt;
@@ -144,6 +189,9 @@
 &lt;li&gt;&lt;a href=&#34;http://www.mangapanda.com/ranma-12&#34;&gt;Ranma &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.mangareader.net/assassination-classroom&#34;&gt;Assassination Classroom&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.mangapanda.com/assassination-classroom-extra&#34;&gt;Assasination Classroom Extra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mangafox.me/manga/cerberus/&#34;&gt;Cerberus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mangapanda.com/fairy-tail-zero/&#34;&gt;Fairy Tail Zero&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mangapanda.com/onihime-vs&#34;&gt;Onihime VS&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;discontinued:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Discontinued:&lt;/h2&gt;
@@ -155,6 +203,10 @@
 &lt;li&gt;Dive in the Vampire Bund &lt;a href=&#34;http://www.mangareader.net/dive-in-the-vampire-bund/9&#34;&gt;9&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Paladin &lt;a href=&#34;http://www.mangareader.net/paladin/50&#34;&gt;50&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;The Devil King Is Bored &lt;a href=&#34;http://www.mangareader.net/the-devil-king-is-bored/36&#34;&gt;36&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Skill of Lure &lt;a href=&#34;http://www.mangapanda.com/skill-of-lure/31&#34;&gt;31&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Shaman King Flowers &lt;a href=&#34;http://mangafox.me/manga/shaman_king_flowers/30&#34;&gt;30&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Soul Eater Not! &lt;a href=&#34;http://www.mangareader.net/soul-eater-not/20&#34;&gt;20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Monster x Monster &lt;a href=&#34;http://www.mangapanda.com/monster-x-monster/16&#34;&gt;16&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
