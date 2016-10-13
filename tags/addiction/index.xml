@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Addiction on forevergenin</title>
-    <link>http://www.forevergenin.com/tags/addiction/</link>
-    <description>Recent content in Addiction on forevergenin</description>
+    <title>forevergenin</title>
+    <link>http://www.forevergenin.com/tags/addiction/index.xml</link>
+    <description>Recent content on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 May 2015 14:19:04 +0530</lastBuildDate>
-    <atom:link href="http://www.forevergenin.com/tags/addiction/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/addiction/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>My Manga Tracking List</title>
@@ -20,7 +19,7 @@
 
 &lt;p&gt;This is my official track list for all the Mangas/Manhwas I have completed or currently reading.&lt;/p&gt;
 
-&lt;h2 id=&#34;currently-reading:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Currently Reading:&lt;/h2&gt;
+&lt;h2 id=&#34;currently-reading&#34;&gt;Currently Reading:&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;One Piece &lt;a href=&#34;http://www.mangareader.net/one-piece/826&#34;&gt;826&lt;/a&gt;&lt;/li&gt;
@@ -70,7 +69,7 @@
 &lt;li&gt;Ouroboros&lt;a href=&#34;http://www.mangareader.net/ouroboros/87&#34;&gt;87&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;completed:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Completed:&lt;/h2&gt;
+&lt;h2 id=&#34;completed&#34;&gt;Completed:&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.mangareader.net/lone-wolf-and-cub&#34;&gt;Lone Wolf and Cub&lt;/a&gt;&lt;/li&gt;
@@ -144,7 +143,7 @@
 &lt;li&gt;&lt;a href=&#34;http://www.mangapanda.com/onihime-vs&#34;&gt;Onihime VS&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;discontinued:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Discontinued:&lt;/h2&gt;
+&lt;h2 id=&#34;discontinued&#34;&gt;Discontinued:&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Aflame Inferno &lt;a href=&#34;http://www.mangareader.net/aflame-inferno/50&#34;&gt;50&lt;/a&gt;&lt;/li&gt;

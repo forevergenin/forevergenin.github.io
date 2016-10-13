@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on forevergenin</title>
-    <link>http://www.forevergenin.com/categories/linux/</link>
-    <description>Recent content in Linux on forevergenin</description>
+    <title>forevergenin</title>
+    <link>http://www.forevergenin.com/categories/linux/index.xml</link>
+    <description>Recent content on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 01 Jun 2016 13:54:56 +0530</lastBuildDate>
-    <atom:link href="http://www.forevergenin.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cross Compilation Checklist</title>
+      <link>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</link>
+      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      
+      <guid>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</guid>
+      <description>
+
+&lt;p&gt;This check-list tries to document the obvious, to reduce the time spent fixing toolchain related errors while cross compiling.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Export the toolchain location to the &lt;code&gt;PATH&lt;/code&gt; environment variable&lt;/li&gt;
+&lt;li&gt;Set proper &lt;code&gt;--sysroot&lt;/code&gt; for &lt;code&gt;CFLAGS&lt;/code&gt;, &lt;code&gt;CXXFLAGS&lt;/code&gt; and &lt;code&gt;LDFLAGS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set proper &lt;code&gt;PKG_CONFIG_SYSROOT_DIR&lt;/code&gt;, &lt;code&gt;PKG_CONFIG_PATH&lt;/code&gt; and &lt;code&gt;PKG_CONFIG_LIBDIR&lt;/code&gt; for &lt;code&gt;pkg-config&lt;/code&gt; tool. This is important for build scripts which use &lt;code&gt;pkg-config&lt;/code&gt; to determine the proper build flags.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;span class=&#34;label label-warning&#34;&gt;
+	
+		 Note: Use pkg-config &gt;= 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value
+	
+&lt;/span&gt;
+
+
+&lt;h2 id=&#34;a-sample-configuration&#34;&gt;A sample configuration&lt;/h2&gt;
+
+&lt;script src=&#34;//gist.github.com/anonymous/ded312c993703b953fcae9ccbed20235.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;span class=&#34;label label-info&#34;&gt;
+	
+		Note : Need to update the post on how to cross compile packages which use autoconf tools
+	
+&lt;/span&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Distro independent Java development environment setup</title>

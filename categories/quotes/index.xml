@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quotes on forevergenin</title>
-    <link>http://www.forevergenin.com/categories/quotes/</link>
-    <description>Recent content in Quotes on forevergenin</description>
+    <title>forevergenin</title>
+    <link>http://www.forevergenin.com/categories/quotes/index.xml</link>
+    <description>Recent content on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 May 2015 00:12:40 +0530</lastBuildDate>
-    <atom:link href="http://www.forevergenin.com/categories/quotes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/quotes/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Breakfast Club</title>

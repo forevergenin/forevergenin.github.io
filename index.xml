@@ -2,13 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>forevergenin</title>
-    <link>http://www.forevergenin.com/</link>
+    <link>http://www.forevergenin.com/index.xml</link>
     <description>Recent content on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 01 Jun 2016 13:54:56 +0530</lastBuildDate>
-    <atom:link href="http://www.forevergenin.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Oct 2016 16:19:56 +0530</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cross Compilation Checklist</title>
+      <link>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</link>
+      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      
+      <guid>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</guid>
+      <description>
+
+&lt;p&gt;This check-list tries to document the obvious, to reduce the time spent fixing toolchain related errors while cross compiling.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Export the toolchain location to the &lt;code&gt;PATH&lt;/code&gt; environment variable&lt;/li&gt;
+&lt;li&gt;Set proper &lt;code&gt;--sysroot&lt;/code&gt; for &lt;code&gt;CFLAGS&lt;/code&gt;, &lt;code&gt;CXXFLAGS&lt;/code&gt; and &lt;code&gt;LDFLAGS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set proper &lt;code&gt;PKG_CONFIG_SYSROOT_DIR&lt;/code&gt;, &lt;code&gt;PKG_CONFIG_PATH&lt;/code&gt; and &lt;code&gt;PKG_CONFIG_LIBDIR&lt;/code&gt; for &lt;code&gt;pkg-config&lt;/code&gt; tool. This is important for build scripts which use &lt;code&gt;pkg-config&lt;/code&gt; to determine the proper build flags.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;span class=&#34;label label-warning&#34;&gt;
+	
+		 Note: Use pkg-config &gt;= 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value
+	
+&lt;/span&gt;
+
+
+&lt;h2 id=&#34;a-sample-configuration&#34;&gt;A sample configuration&lt;/h2&gt;
+
+&lt;script src=&#34;//gist.github.com/anonymous/ded312c993703b953fcae9ccbed20235.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;span class=&#34;label label-info&#34;&gt;
+	
+		Note : Need to update the post on how to cross compile packages which use autoconf tools
+	
+&lt;/span&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Distro independent Java development environment setup</title>
@@ -70,7 +108,7 @@
 
 &lt;p&gt;This is my official track list for all the Mangas/Manhwas I have completed or currently reading.&lt;/p&gt;
 
-&lt;h2 id=&#34;currently-reading:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Currently Reading:&lt;/h2&gt;
+&lt;h2 id=&#34;currently-reading&#34;&gt;Currently Reading:&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;One Piece &lt;a href=&#34;http://www.mangareader.net/one-piece/826&#34;&gt;826&lt;/a&gt;&lt;/li&gt;
@@ -120,7 +158,7 @@
 &lt;li&gt;Ouroboros&lt;a href=&#34;http://www.mangareader.net/ouroboros/87&#34;&gt;87&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;completed:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Completed:&lt;/h2&gt;
+&lt;h2 id=&#34;completed&#34;&gt;Completed:&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.mangareader.net/lone-wolf-and-cub&#34;&gt;Lone Wolf and Cub&lt;/a&gt;&lt;/li&gt;
@@ -194,7 +232,7 @@
 &lt;li&gt;&lt;a href=&#34;http://www.mangapanda.com/onihime-vs&#34;&gt;Onihime VS&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;discontinued:47c4d94ddc7e85b7b823666eadf8283f&#34;&gt;Discontinued:&lt;/h2&gt;
+&lt;h2 id=&#34;discontinued&#34;&gt;Discontinued:&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Aflame Inferno &lt;a href=&#34;http://www.mangareader.net/aflame-inferno/50&#34;&gt;50&lt;/a&gt;&lt;/li&gt;

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Apache on forevergenin</title>
-    <link>http://www.forevergenin.com/tags/apache/</link>
-    <description>Recent content in Apache on forevergenin</description>
+    <title>forevergenin</title>
+    <link>http://www.forevergenin.com/tags/apache/index.xml</link>
+    <description>Recent content on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 01 Jun 2016 13:54:56 +0530</lastBuildDate>
-    <atom:link href="http://www.forevergenin.com/tags/apache/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/apache/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Distro independent Java development environment setup</title>
