@@ -27,7 +27,7 @@
 &lt;/ol&gt;
 
 
-&lt;span class=&#34;label label-warning&#34;&gt;
+&lt;span class=&#34;span-block label label-warning&#34;&gt;
 	
 		 Note: Use pkg-config &gt;= 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value
 	
@@ -39,7 +39,7 @@
 &lt;script src=&#34;//gist.github.com/anonymous/ded312c993703b953fcae9ccbed20235.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;span class=&#34;label label-info&#34;&gt;
+&lt;span class=&#34;span-block label label-info&#34;&gt;
 	
 		Note : Need to update the post on how to cross compile packages which use autoconf tools
 	
