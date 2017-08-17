@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>forevergenin</title>
-    <link>http://www.forevergenin.com/tags/naruto/index.xml</link>
-    <description>Recent content on forevergenin</description>
+    <title>Naruto on forevergenin</title>
+    <link>http://www.forevergenin.com/tags/naruto/</link>
+    <description>Recent content in Naruto on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</copyright>
-    <atom:link href="/tags/naruto/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>hello@forevergenin.com (SPK)</managingEditor>
+    <webMaster>hello@forevergenin.com (SPK)</webMaster>
+    <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 04 Nov 2014 21:11:17 +0530</lastBuildDate>
+    
+	<atom:link href="http://www.forevergenin.com/tags/naruto/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Naruto comes to an end</title>
       <link>http://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</link>
       <pubDate>Tue, 04 Nov 2014 21:11:17 +0530</pubDate>
-      
+      <author>hello@forevergenin.com (SPK)</author>
       <guid>http://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</guid>
-      <description>&lt;p&gt;Finally, after much deliberation I have decided to spend some time on maintaining a personal blog (more about this &lt;em&gt;decision&lt;/em&gt; later). Now the question is what should be my first post? Much like most of the decisions I have made in my life I left this one as well to randomness and I stumbled upon this &lt;a href=&#34;http://kotaku.com/the-naruto-manga-ends-next-month-1642809700&#34; title=&#34;Naruto Manga Ends&#34;&gt;article&lt;/a&gt; at &lt;a href=&#34;http://kotaku.com&#34; title=&#34;Kotaku.com&#34;&gt;Kotaku&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Though it was my first manga, the truth is I was not worried much about the end. In fact I felt a sense of relief considering the recent decline in the quality of Naruto storyline. Good or bad, all things must come to an end.&lt;/p&gt;
-</description>
+      <description>Finally, after much deliberation I have decided to spend some time on maintaining a personal blog (more about this decision later). Now the question is what should be my first post? Much like most of the decisions I have made in my life I left this one as well to randomness and I stumbled upon this article at Kotaku.
+Though it was my first manga, the truth is I was not worried much about the end.</description>
     </item>
     
   </channel>

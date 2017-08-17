@@ -1,100 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>forevergenin</title>
-    <link>http://www.forevergenin.com/categories/linux/index.xml</link>
-    <description>Recent content on forevergenin</description>
+    <title>Linux on forevergenin</title>
+    <link>http://www.forevergenin.com/categories/linux/</link>
+    <description>Recent content in Linux on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2014 - 2016, Premkumar Subramanian; all rights reserved.</copyright>
-    <atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>hello@forevergenin.com (SPK)</managingEditor>
+    <webMaster>hello@forevergenin.com (SPK)</webMaster>
+    <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 13 Oct 2016 16:19:56 +0530</lastBuildDate>
+    
+	<atom:link href="http://www.forevergenin.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cross Compilation Checklist</title>
       <link>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</link>
       <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      
+      <author>hello@forevergenin.com (SPK)</author>
       <guid>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</guid>
-      <description>
-
-&lt;p&gt;This check-list tries to document the obvious, to reduce the time spent fixing toolchain related errors while cross compiling.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Export the toolchain location to the &lt;code&gt;PATH&lt;/code&gt; environment variable&lt;/li&gt;
-&lt;li&gt;Set proper &lt;code&gt;--sysroot&lt;/code&gt; for &lt;code&gt;CFLAGS&lt;/code&gt;, &lt;code&gt;CXXFLAGS&lt;/code&gt; and &lt;code&gt;LDFLAGS&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Set proper &lt;code&gt;PKG_CONFIG_SYSROOT_DIR&lt;/code&gt;, &lt;code&gt;PKG_CONFIG_PATH&lt;/code&gt; and &lt;code&gt;PKG_CONFIG_LIBDIR&lt;/code&gt; for &lt;code&gt;pkg-config&lt;/code&gt; tool. This is important for build scripts which use &lt;code&gt;pkg-config&lt;/code&gt; to determine the proper build flags.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;span class=&#34;span-block label label-warning&#34;&gt;
-	
-		 Note: Use pkg-config &gt;= 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value
-	
-&lt;/span&gt;
-
-
-&lt;h2 id=&#34;a-sample-configuration&#34;&gt;A sample configuration&lt;/h2&gt;
-
-&lt;script src=&#34;//gist.github.com/anonymous/ded312c993703b953fcae9ccbed20235.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;span class=&#34;span-block label label-info&#34;&gt;
-	
-		Note : Need to update the post on how to cross compile packages which use autoconf tools
-	
-&lt;/span&gt;
-
-</description>
+      <description> This check-list tries to document the obvious, to reduce the time spent fixing toolchain related errors while cross compiling.
+ Export the toolchain location to the PATH environment variable Set proper --sysroot for CFLAGS, CXXFLAGS and LDFLAGS Set proper PKG_CONFIG_SYSROOT_DIR, PKG_CONFIG_PATH and PKG_CONFIG_LIBDIR for pkg-config tool. This is important for build scripts which use pkg-config to determine the proper build flags.  Note: Use pkg-config = 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value  A sample configuration  Note : Need to update the post on how to cross compile packages which use autoconf tools  </description>
     </item>
     
     <item>
       <title>Distro independent Java development environment setup</title>
       <link>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      
+      <author>hello@forevergenin.com (SPK)</author>
       <guid>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</guid>
-      <description>&lt;p&gt;Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as &lt;a href=&#34;https://help.ubuntu.com/community/Repositories/Ubuntu#Adding_Canonical_Partner_Repositories&#34; title=&#34;Canonical Partner Repositories&#34;&gt;Canonical&amp;rsquo;s partner repository&lt;/a&gt; ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default. Setting up Java development environment manually from scratch on linux has become a tedious job (though still easier doing tha on Microsoft Windows). Nowadays I avoid doing it, given a chance to use a preconfigured virtual machines or chroot tar balls  - created specifically for development/build requirements.&lt;/p&gt;
-
-&lt;p&gt;As for the intent of this post, it is to serve as a guide on best practices of setting up a Java development / build environment from scratch if such need arises in the future.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Prerequisites:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Oracle JDK version of your choice (in our case v1.7.0&lt;em&gt;79&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;Apache Ant version of your choice (in our case 1.9.7) )which works with the JDK version chosen in step 1&lt;/li&gt;
-&lt;li&gt;Apache Maven version of your choice (in our case 3.0.5) which works with the JDK version chosen in step 1&lt;/li&gt;
-&lt;li&gt;Gradle version of your choice (in our case 2.13) which works with the JDK version chosen in step 1&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Download tar ball archives of all the above packages. RPM package is available for Oracle JDK but it kills the &amp;ldquo;distro independent&amp;rdquo; part of this post.&lt;/p&gt;
-
-&lt;p&gt;Extract all the tar balls to a location of your convenience. If I have root or sudo access (which happens to be most of the time), I usually prefer &lt;code&gt;/opt/tools/java&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;After completing the extraction of tarballs to the &lt;code&gt;/opt/tools/java&lt;/code&gt; direcory add the environment config scripts based on the below given template to &lt;code&gt;/etc/profile.d&lt;/code&gt; directory of you linux file system.&lt;/p&gt;
-
-&lt;p&gt;&lt;script src=&#34;//gist.github.com/forevergenin/ea998e338ea85709bfd3837690cab2e9.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//gist.github.com/forevergenin/16b8c2a435e42e440657a6a4608a6f11.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//gist.github.com/forevergenin/f6a99b87eb0f324d0291a0fbae55eb09.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//gist.github.com/forevergenin/15db13908919368ba9019717886aa1e5.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;At the end of the setup, your &lt;code&gt;/etc/profile.d&lt;/code&gt; directory should look something like this&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/etc/profile.d
-├── 00700_java_home.sh
-├── 00701_ant_home.sh
-├── 00702_m2_home.sh
-└── 00703_gradle_home.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And your &lt;code&gt;/opt/tools/java&lt;/code&gt; should look something like this&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/opt/tools/java
-├── apache-ant-1.9.7
-├── apache-maven-3.0.5
-├── gradle-2.13
-└── jdk1.7.0_79
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as Canonical&amp;rsquo;s partner repository ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default.</description>
     </item>
     
   </channel>
