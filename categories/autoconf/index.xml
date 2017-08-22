@@ -6,8 +6,8 @@
     <description>Recent content in Autoconf on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@forevergenin.com (SPK)</managingEditor>
-    <webMaster>hello@forevergenin.com (SPK)</webMaster>
+    <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
+    <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
     <lastBuildDate>Thu, 13 Oct 2016 16:19:56 +0530</lastBuildDate>
     
@@ -18,7 +18,7 @@
       <title>Cross Compilation Checklist</title>
       <link>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</link>
       <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</guid>
       <description> This check-list tries to document the obvious, to reduce the time spent fixing toolchain related errors while cross compiling.
  Export the toolchain location to the PATH environment variable Set proper --sysroot for CFLAGS, CXXFLAGS and LDFLAGS Set proper PKG_CONFIG_SYSROOT_DIR, PKG_CONFIG_PATH and PKG_CONFIG_LIBDIR for pkg-config tool. This is important for build scripts which use pkg-config to determine the proper build flags.  Note: Use pkg-config = 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value  A sample configuration  Note : Need to update the post on how to cross compile packages which use autoconf tools  </description>

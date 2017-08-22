@@ -6,8 +6,8 @@
     <description>Recent content in Tags on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@forevergenin.com (SPK)</managingEditor>
-    <webMaster>hello@forevergenin.com (SPK)</webMaster>
+    <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
+    <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
     <lastBuildDate>Sat, 09 May 2015 14:19:04 +0530</lastBuildDate>
     
@@ -18,7 +18,7 @@
       <title>Addiction</title>
       <link>http://www.forevergenin.com/tags/addiction/</link>
       <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/addiction/</guid>
       <description></description>
     </item>
@@ -27,8 +27,17 @@
       <title>Ant</title>
       <link>http://www.forevergenin.com/tags/ant/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/ant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bind9</title>
+      <link>http://www.forevergenin.com/tags/bind9/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/bind9/</guid>
       <description></description>
     </item>
     
@@ -36,7 +45,7 @@
       <title>Build</title>
       <link>http://www.forevergenin.com/tags/build/</link>
       <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/build/</guid>
       <description></description>
     </item>
@@ -45,8 +54,35 @@
       <title>Development</title>
       <link>http://www.forevergenin.com/tags/development/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Digg</title>
+      <link>http://www.forevergenin.com/tags/digg/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/digg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dns</title>
+      <link>http://www.forevergenin.com/tags/dns/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dnssec</title>
+      <link>http://www.forevergenin.com/tags/dnssec/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/dnssec/</guid>
       <description></description>
     </item>
     
@@ -54,7 +90,7 @@
       <title>Gradle</title>
       <link>http://www.forevergenin.com/tags/gradle/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/gradle/</guid>
       <description></description>
     </item>
@@ -63,7 +99,7 @@
       <title>Java</title>
       <link>http://www.forevergenin.com/tags/java/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/java/</guid>
       <description></description>
     </item>
@@ -72,7 +108,7 @@
       <title>Linux</title>
       <link>http://www.forevergenin.com/tags/linux/</link>
       <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/linux/</guid>
       <description></description>
     </item>
@@ -81,7 +117,7 @@
       <title>Manga</title>
       <link>http://www.forevergenin.com/tags/manga/</link>
       <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/manga/</guid>
       <description></description>
     </item>
@@ -90,7 +126,7 @@
       <title>Manhwa</title>
       <link>http://www.forevergenin.com/tags/manhwa/</link>
       <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/manhwa/</guid>
       <description></description>
     </item>
@@ -99,7 +135,7 @@
       <title>Maven</title>
       <link>http://www.forevergenin.com/tags/maven/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/maven/</guid>
       <description></description>
     </item>
@@ -108,8 +144,17 @@
       <title>Naruto</title>
       <link>http://www.forevergenin.com/tags/naruto/</link>
       <pubDate>Tue, 04 Nov 2014 21:11:17 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/naruto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nsupdate</title>
+      <link>http://www.forevergenin.com/tags/nsupdate/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/nsupdate/</guid>
       <description></description>
     </item>
     
@@ -117,7 +162,7 @@
       <title>Quotes</title>
       <link>http://www.forevergenin.com/tags/quotes/</link>
       <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/quotes/</guid>
       <description></description>
     </item>
@@ -126,7 +171,7 @@
       <title>Rants</title>
       <link>http://www.forevergenin.com/tags/rants/</link>
       <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/rants/</guid>
       <description></description>
     </item>
@@ -135,8 +180,17 @@
       <title>The Breakfast Club</title>
       <link>http://www.forevergenin.com/tags/the-breakfast-club/</link>
       <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (SPK)</author>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/the-breakfast-club/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>http://www.forevergenin.com/tags/ubuntu/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/ubuntu/</guid>
       <description></description>
     </item>
     
