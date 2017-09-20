@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</loc>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/</loc>
     <lastmod>2017-08-22T23:22:56+05:30</lastmod>
   </url>
@@ -81,8 +86,26 @@
   </url>
   
   <url>
+    <loc>http://www.forevergenin.com/tags/chroot/</loc>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.forevergenin.com/categories/cross-compilation/</loc>
     <lastmod>2016-10-13T16:19:56+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/tags/debian/</loc>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/tags/debootstrap/</loc>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,13 +153,13 @@
   
   <url>
     <loc>http://www.forevergenin.com/tags/linux/</loc>
-    <lastmod>2016-10-13T16:19:56+05:30</lastmod>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.forevergenin.com/categories/linux/</loc>
-    <lastmod>2017-08-22T23:22:56+05:30</lastmod>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -196,7 +219,7 @@
   
   <url>
     <loc>http://www.forevergenin.com/posts/</loc>
-    <lastmod>2017-08-22T23:22:56+05:30</lastmod>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -225,6 +248,18 @@
   </url>
   
   <url>
+    <loc>http://www.forevergenin.com/tags/rootfs/</loc>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/categories/rootfs/</loc>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.forevergenin.com/categories/sysroot/</loc>
     <lastmod>2016-10-13T16:19:56+05:30</lastmod>
     <priority>0</priority>
@@ -244,13 +279,13 @@
   
   <url>
     <loc>http://www.forevergenin.com/tags/ubuntu/</loc>
-    <lastmod>2017-08-22T23:22:56+05:30</lastmod>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.forevergenin.com/</loc>
-    <lastmod>2017-08-22T23:22:56+05:30</lastmod>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
     <priority>0</priority>
   </url>
   

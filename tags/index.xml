@@ -51,6 +51,33 @@
     </item>
     
     <item>
+      <title>Chroot</title>
+      <link>http://www.forevergenin.com/tags/chroot/</link>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/chroot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>http://www.forevergenin.com/tags/debian/</link>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debootstrap</title>
+      <link>http://www.forevergenin.com/tags/debootstrap/</link>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/debootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Development</title>
       <link>http://www.forevergenin.com/tags/development/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
@@ -107,7 +134,7 @@
     <item>
       <title>Linux</title>
       <link>http://www.forevergenin.com/tags/linux/</link>
-      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/linux/</guid>
       <description></description>
@@ -177,6 +204,15 @@
     </item>
     
     <item>
+      <title>Rootfs</title>
+      <link>http://www.forevergenin.com/tags/rootfs/</link>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/rootfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The Breakfast Club</title>
       <link>http://www.forevergenin.com/tags/the-breakfast-club/</link>
       <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
@@ -188,7 +224,7 @@
     <item>
       <title>Ubuntu</title>
       <link>http://www.forevergenin.com/tags/ubuntu/</link>
-      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/tags/ubuntu/</guid>
       <description></description>
