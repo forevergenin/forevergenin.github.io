@@ -68,13 +68,13 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/tags/build/</loc>
+    <loc>http://www.forevergenin.com/categories/build/</loc>
     <lastmod>2016-10-13T16:19:56+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/categories/build/</loc>
+    <loc>http://www.forevergenin.com/tags/build/</loc>
     <lastmod>2016-10-13T16:19:56+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -140,20 +140,14 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/tags/java/</loc>
-    <lastmod>2016-06-01T13:54:56+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.forevergenin.com/categories/java/</loc>
     <lastmod>2016-06-01T13:54:56+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/tags/linux/</loc>
-    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <loc>http://www.forevergenin.com/tags/java/</loc>
+    <lastmod>2016-06-01T13:54:56+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -164,13 +158,19 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/tags/manga/</loc>
-    <lastmod>2015-05-09T14:19:04+05:30</lastmod>
+    <loc>http://www.forevergenin.com/tags/linux/</loc>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.forevergenin.com/categories/manga/</loc>
+    <lastmod>2015-05-09T14:19:04+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/tags/manga/</loc>
     <lastmod>2015-05-09T14:19:04+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -224,19 +224,13 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/tags/quotes/</loc>
-    <lastmod>2015-05-09T00:12:40+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.forevergenin.com/categories/quotes/</loc>
     <lastmod>2015-05-09T00:12:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/tags/rants/</loc>
+    <loc>http://www.forevergenin.com/tags/quotes/</loc>
     <lastmod>2015-05-09T00:12:40+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -248,13 +242,19 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/tags/rootfs/</loc>
-    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <loc>http://www.forevergenin.com/tags/rants/</loc>
+    <lastmod>2015-05-09T00:12:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.forevergenin.com/categories/rootfs/</loc>
+    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/tags/rootfs/</loc>
     <lastmod>2017-09-20T14:17:48+05:30</lastmod>
     <priority>0</priority>
   </url>
