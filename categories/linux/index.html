@@ -19,7 +19,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="forevergenin" />
 
-  <meta name="generator" content="Hugo 0.29" />
+  <meta name="generator" content="Hugo 0.30.2" />
   <link rel="canonical" href="http://www.forevergenin.com/categories/linux/" />
   <link rel="alternate" href="http://www.forevergenin.com/index.xml" type="application/rss+xml" title="forevergenin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -183,6 +183,48 @@ ga('send', 'pageview');
         <div class="posts-list">
           
             <article class="post-preview">
+              <a href="http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/">
+                <h2 class="post-title">Bootstrapping CentOS rootfs for use with chroots/containers</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 16, 2017
+              </p>
+              <div class="post-entry">
+                
+                  We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
+The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.
+                  <a href="http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.forevergenin.com/tags/linux/">linux</a>&nbsp;
+                  
+                    #<a href="http://www.forevergenin.com/tags/rootfs/">rootfs</a>&nbsp;
+                  
+                    #<a href="http://www.forevergenin.com/tags/bootstrap/">bootstrap</a>&nbsp;
+                  
+                    #<a href="http://www.forevergenin.com/tags/rpm/">rpm</a>&nbsp;
+                  
+                    #<a href="http://www.forevergenin.com/tags/yum/">yum</a>&nbsp;
+                  
+                    #<a href="http://www.forevergenin.com/tags/redhat/">redhat</a>&nbsp;
+                  
+                    #<a href="http://www.forevergenin.com/tags/centos/">centos</a>&nbsp;
+                  
+                    #<a href="http://www.forevergenin.com/tags/fedora/">fedora</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
               <a href="http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/">
                 <h2 class="post-title">Bootstrapping a debian rootfs for use with chroots/containers</h2>
 
@@ -195,7 +237,7 @@ ga('send', 'pageview');
               <div class="post-entry">
                 
                   The aim this time is to setup a base rootfs for Ubuntu/Debian distro which can be used for setting up a chroot jail or to create a docker container base image. This blog is based on a earlier blog which I have written but forgot to publish around June, 2012.
-The below mentioned steps are validated on Fedora 25 Worstation installation.  For setting up a debian based rootfs we need a tool called debootstrap.
+The below mentioned steps are validated on Fedora 25 Workstation installation.  For setting up a debian based rootfs we need a tool called debootstrap.
                   <a href="http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -252,63 +294,6 @@ Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root acce
                     #<a href="http://www.forevergenin.com/tags/nsupdate/">nsupdate</a>&nbsp;
                   
                     #<a href="http://www.forevergenin.com/tags/digg/">digg</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.forevergenin.com/posts/linux/cross-compilation-checklist/">
-                <h2 class="post-title">Cross Compilation Checklist</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 13, 2016
-              </p>
-              <div class="post-entry">
-                
-                  
-
-<p>This check-list tries to document the obvious, to reduce the time spent fixing toolchain related errors while cross compiling.</p>
-
-<ol>
-<li>Export the toolchain location to the <code>PATH</code> environment variable</li>
-<li>Set proper <code>--sysroot</code> for <code>CFLAGS</code>, <code>CXXFLAGS</code> and <code>LDFLAGS</code></li>
-<li>Set proper <code>PKG_CONFIG_SYSROOT_DIR</code>, <code>PKG_CONFIG_PATH</code> and <code>PKG_CONFIG_LIBDIR</code> for <code>pkg-config</code> tool. This is important for build scripts which use <code>pkg-config</code> to determine the proper build flags.</li>
-</ol>
-
-
-<span class="span-block label label-warning">
-	
-		 Note: Use pkg-config >= 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value
-	
-</span>
-
-
-<h2 id="a-sample-configuration">A sample configuration</h2>
-
-<script src="//gist.github.com/anonymous/ded312c993703b953fcae9ccbed20235.js"></script>
-
-
-<span class="span-block label label-info">
-	
-		Note : Need to update the post on how to cross compile packages which use autoconf tools
-	
-</span>
-
-
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.forevergenin.com/tags/linux/">linux</a>&nbsp;
-                  
-                    #<a href="http://www.forevergenin.com/tags/build/">build</a>&nbsp;
                   
                 </span>
               
@@ -420,7 +405,7 @@ Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root acce
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.29</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.30.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

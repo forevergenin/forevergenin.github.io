@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</loc>
     <lastmod>2017-09-20T14:17:48+05:30</lastmod>
   </url>
@@ -68,8 +73,8 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/categories/build/</loc>
-    <lastmod>2016-10-13T16:19:56+05:30</lastmod>
+    <loc>http://www.forevergenin.com/tags/bootstrap/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -80,8 +85,20 @@
   </url>
   
   <url>
+    <loc>http://www.forevergenin.com/categories/build/</loc>
+    <lastmod>2016-10-13T16:19:56+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.forevergenin.com/categories/</loc>
     <lastmod>2016-10-13T16:19:56+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/tags/centos/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -134,13 +151,13 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/tags/gradle/</loc>
-    <lastmod>2016-06-01T13:54:56+05:30</lastmod>
+    <loc>http://www.forevergenin.com/tags/fedora/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/categories/java/</loc>
+    <loc>http://www.forevergenin.com/tags/gradle/</loc>
     <lastmod>2016-06-01T13:54:56+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -152,25 +169,31 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/categories/linux/</loc>
-    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <loc>http://www.forevergenin.com/categories/java/</loc>
+    <lastmod>2016-06-01T13:54:56+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.forevergenin.com/tags/linux/</loc>
-    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/categories/manga/</loc>
-    <lastmod>2015-05-09T14:19:04+05:30</lastmod>
+    <loc>http://www.forevergenin.com/categories/linux/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.forevergenin.com/tags/manga/</loc>
+    <lastmod>2015-05-09T14:19:04+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/categories/manga/</loc>
     <lastmod>2015-05-09T14:19:04+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -219,13 +242,7 @@
   
   <url>
     <loc>http://www.forevergenin.com/posts/</loc>
-    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.forevergenin.com/categories/quotes/</loc>
-    <lastmod>2015-05-09T00:12:40+05:30</lastmod>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -236,7 +253,7 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/categories/rants/</loc>
+    <loc>http://www.forevergenin.com/categories/quotes/</loc>
     <lastmod>2015-05-09T00:12:40+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -248,14 +265,32 @@
   </url>
   
   <url>
-    <loc>http://www.forevergenin.com/categories/rootfs/</loc>
-    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <loc>http://www.forevergenin.com/categories/rants/</loc>
+    <lastmod>2015-05-09T00:12:40+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/tags/redhat/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.forevergenin.com/tags/rootfs/</loc>
-    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/categories/rootfs/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.forevergenin.com/tags/rpm/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -284,8 +319,14 @@
   </url>
   
   <url>
+    <loc>http://www.forevergenin.com/tags/yum/</loc>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.forevergenin.com/</loc>
-    <lastmod>2017-09-20T14:17:48+05:30</lastmod>
+    <lastmod>2017-11-16T15:35:45+05:30</lastmod>
     <priority>0</priority>
   </url>
   

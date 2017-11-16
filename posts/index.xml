@@ -9,10 +9,20 @@
     <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
     <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 20 Sep 2017 14:17:48 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 15:35:45 +0530</lastBuildDate>
     
 	<atom:link href="http://www.forevergenin.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bootstrapping CentOS rootfs for use with chroots/containers</title>
+      <link>http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</link>
+      <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</guid>
+      <description>We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
+The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.</description>
+    </item>
     
     <item>
       <title>Bootstrapping a debian rootfs for use with chroots/containers</title>
@@ -21,7 +31,7 @@
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</guid>
       <description>The aim this time is to setup a base rootfs for Ubuntu/Debian distro which can be used for setting up a chroot jail or to create a docker container base image. This blog is based on a earlier blog which I have written but forgot to publish around June, 2012.
-The below mentioned steps are validated on Fedora 25 Worstation installation.  For setting up a debian based rootfs we need a tool called debootstrap.</description>
+The below mentioned steps are validated on Fedora 25 Workstation installation.  For setting up a debian based rootfs we need a tool called debootstrap.</description>
     </item>
     
     <item>
