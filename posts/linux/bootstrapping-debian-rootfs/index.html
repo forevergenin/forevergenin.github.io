@@ -24,7 +24,7 @@ The below mentioned steps are validated on Fedora 25 Workstation installation.  
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="forevergenin" />
 
-  <meta name="generator" content="Hugo 0.42.1" />
+  <meta name="generator" content="Hugo 0.50" />
   <link rel="canonical" href="http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/" />
   <link rel="alternate" href="http://www.forevergenin.com/index.xml" type="application/rss+xml" title="forevergenin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -87,7 +87,7 @@ The below mentioned steps are validated on Fedora 25 Workstation installation.  
     </div>
 </div>
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -223,13 +223,13 @@ if (!doNotTrack) {
 
 <p>For setting up a <code>debian</code> based rootfs we need a tool called <a href="https://manpages.debian.org/stretch/debootstrap/debootstrap.8.en.html"><code>debootstrap</code></a>. It&rsquo;s available as part of <a href="https://fedoraproject.org/wiki/EPEL">EPEL</a> repository for Fedora and other Redhat based distros. Make sure to always install the latest version of <a href="https://manpages.debian.org/stretch/debootstrap/debootstrap.8.en.html"><code>debootstrap</code></a>.</p>
 
-<script src="//gist.github.com/anonymous/c9e8e06a9e528f9194b280c9ebd08946.js"></script>
+<script type="application/javascript" src="//gist.github.com/anonymous/c9e8e06a9e528f9194b280c9ebd08946.js"></script>
 
 <p>To setup a base rootfs you need to decide on the version of debian distro (wheezy, jessie, buster), the target architecture (i386 or amd64) and what kind of variant you want to setup. Do read the man page of <a href="https://manpages.debian.org/stretch/debootstrap/debootstrap.8.en.html"><code>debootstrap</code></a> to know about more advanced options.</p>
 
 <p>For this post, we are looking to setup a <code>debian wheezy</code> based rootfs to be used as amd64 build environment.</p>
 
-<script src="//gist.github.com/anonymous/465dd726be4e42ee8046b7d405e3857b.js"></script>
+<script type="application/javascript" src="//gist.github.com/anonymous/465dd726be4e42ee8046b7d405e3857b.js"></script>
 
 <p>In the above command <code>components</code> argument is used to specify which components to enable the distri repository. For <code>debian</code>, there are three components - <code>main</code>, <code>contrib</code> and <code>non-free</code>. We have enabled all three for our base rootfs.</p>
 
@@ -237,23 +237,23 @@ if (!doNotTrack) {
 
 <p>Now if we want to customize our rootfs we can do so using the <a href="https://manpages.debian.org/jessie/coreutils/chroot.8.en.html"><code>chroot</code></a> command. For that we need to <code>mount</code> certain mount points and use the <a href="https://manpages.debian.org/jessie/coreutils/chroot.8.en.html"><code>chroot</code></a> command to enter and customize the rootfs.</p>
 
-<script src="//gist.github.com/anonymous/2741b53b834bf481ae7eb8b693aab577.js"></script>
+<script type="application/javascript" src="//gist.github.com/anonymous/2741b53b834bf481ae7eb8b693aab577.js"></script>
 
 <p>We are going to install <code>sudo</code> package inside the chroot.</p>
 
-<script src="//gist.github.com/anonymous/0cabca2aaad94a18fab022919b2a9902.js"></script>
+<script type="application/javascript" src="//gist.github.com/anonymous/0cabca2aaad94a18fab022919b2a9902.js"></script>
 
 <p>Once the customization is done we need to properly unmount all the chroot mount points.</p>
 
-<script src="//gist.github.com/anonymous/6cfc234d7b139bab0782d87a9d24c75c.js"></script>
+<script type="application/javascript" src="//gist.github.com/anonymous/6cfc234d7b139bab0782d87a9d24c75c.js"></script>
 
 <p>In case you simply want to invoke a command inside the chroot skipping all the complex mount point setup you do so by running the command in the below mentioned format.</p>
 
-<script src="//gist.github.com/anonymous/68d5005e33e0cda3e8cda66677945233.js"></script>
+<script type="application/javascript" src="//gist.github.com/anonymous/68d5005e33e0cda3e8cda66677945233.js"></script>
 
 <p>As final step we can package the chroot as a tarball. It is recommended to clean the cache folder of the rootfs before creating the tarball.</p>
 
-<script src="//gist.github.com/anonymous/fc5c1c104de0e2e7ef89aa6085df2762.js"></script>
+<script type="application/javascript" src="//gist.github.com/anonymous/fc5c1c104de0e2e7ef89aa6085df2762.js"></script>
 
 <p>This will create a tarball named <code>wheezy-chroot.tar.xz</code> in the current directory. The newly created tarball can be used as base to create a new docker container or as a chroot jail.</p>
 
@@ -377,7 +377,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.42.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.50</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
