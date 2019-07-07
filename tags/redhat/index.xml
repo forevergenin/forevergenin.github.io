@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Redhat on forevergenin</title>
+    <title>redhat on forevergenin</title>
     <link>http://www.forevergenin.com/tags/redhat/</link>
-    <description>Recent content in Redhat on forevergenin</description>
+    <description>Recent content in redhat on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
@@ -21,7 +21,8 @@
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</guid>
       <description>We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
-The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.</description>
+ The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  
+Lets get started As usual the first step, install the required dependecy packages which in our case is yum.</description>
     </item>
     
   </channel>

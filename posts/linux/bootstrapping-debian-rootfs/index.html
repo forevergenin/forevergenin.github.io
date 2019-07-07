@@ -9,9 +9,11 @@
   <meta property="og:title" content="Bootstrapping a debian rootfs for use with chroots/containers" />
   <meta name="twitter:title" content="Bootstrapping a debian rootfs for use with chroots/containers" />
   <meta name="description" content="The aim this time is to setup a base rootfs for Ubuntu/Debian distro which can be used for setting up a chroot jail or to create a docker container base image. This blog is based on a earlier blog which I have written but forgot to publish around June, 2012.
-The below mentioned steps are validated on Fedora 25 Workstation installation.  For setting up a debian based rootfs we need a tool called debootstrap.">
+ The below mentioned steps are validated on Fedora 25 Workstation installation.  
+For setting up a debian based rootfs we need a tool called debootstrap.">
   <meta property="og:description" content="The aim this time is to setup a base rootfs for Ubuntu/Debian distro which can be used for setting up a chroot jail or to create a docker container base image. This blog is based on a earlier blog which I have written but forgot to publish around June, 2012.
-The below mentioned steps are validated on Fedora 25 Workstation installation.  For setting up a debian based rootfs we need a tool called debootstrap.">
+ The below mentioned steps are validated on Fedora 25 Workstation installation.  
+For setting up a debian based rootfs we need a tool called debootstrap.">
   <meta name="twitter:description" content="The aim this time is to setup a base rootfs for Ubuntu/Debian distro which can be used for setting up a chroot jail or to create a docker container base image. This blog is based on a earlier blog …">
   <meta name="author" content="Premkumar Subramanian"/>
   <link href='http://www.forevergenin.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -24,7 +26,7 @@ The below mentioned steps are validated on Fedora 25 Workstation installation.  
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="forevergenin" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <link rel="canonical" href="http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/" />
   <link rel="alternate" href="http://www.forevergenin.com/index.xml" type="application/rss+xml" title="forevergenin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -213,13 +215,12 @@ if (!doNotTrack) {
 
 <p>The aim this time is to setup a base rootfs for Ubuntu/Debian distro which can be used for setting up a chroot jail or to create a docker container base image. This blog is based on a earlier blog which I have written but forgot to publish around June, 2012.</p>
 
+<p><span class="span-block label label-info"></p>
 
-<span class="span-block label label-info">
-	
-		The below mentioned steps are validated on Fedora 25 Workstation installation.
-	
-</span>
+<pre><code>    The below mentioned steps are validated on Fedora 25 Workstation installation.
+</code></pre>
 
+<p></span></p>
 
 <p>For setting up a <code>debian</code> based rootfs we need a tool called <a href="https://manpages.debian.org/stretch/debootstrap/debootstrap.8.en.html"><code>debootstrap</code></a>. It&rsquo;s available as part of <a href="https://fedoraproject.org/wiki/EPEL">EPEL</a> repository for Fedora and other Redhat based distros. Make sure to always install the latest version of <a href="https://manpages.debian.org/stretch/debootstrap/debootstrap.8.en.html"><code>debootstrap</code></a>.</p>
 
@@ -377,7 +378,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.55.6</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

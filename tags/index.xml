@@ -9,40 +9,13 @@
     <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
     <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 May 2015 14:19:04 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 15:35:45 +0530</lastBuildDate>
     
 	<atom:link href="http://www.forevergenin.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Addiction</title>
-      <link>http://www.forevergenin.com/tags/addiction/</link>
-      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/addiction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ant</title>
-      <link>http://www.forevergenin.com/tags/ant/</link>
-      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/ant/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bind9</title>
-      <link>http://www.forevergenin.com/tags/bind9/</link>
-      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/bind9/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bootstrap</title>
+      <title>bootstrap</title>
       <link>http://www.forevergenin.com/tags/bootstrap/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -51,16 +24,7 @@
     </item>
     
     <item>
-      <title>Build</title>
-      <link>http://www.forevergenin.com/tags/build/</link>
-      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/build/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Centos</title>
+      <title>centos</title>
       <link>http://www.forevergenin.com/tags/centos/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -69,70 +33,7 @@
     </item>
     
     <item>
-      <title>Chroot</title>
-      <link>http://www.forevergenin.com/tags/chroot/</link>
-      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/chroot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian</title>
-      <link>http://www.forevergenin.com/tags/debian/</link>
-      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/debian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debootstrap</title>
-      <link>http://www.forevergenin.com/tags/debootstrap/</link>
-      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/debootstrap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development</title>
-      <link>http://www.forevergenin.com/tags/development/</link>
-      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Digg</title>
-      <link>http://www.forevergenin.com/tags/digg/</link>
-      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/digg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dns</title>
-      <link>http://www.forevergenin.com/tags/dns/</link>
-      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/dns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dnssec</title>
-      <link>http://www.forevergenin.com/tags/dnssec/</link>
-      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/dnssec/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fedora</title>
+      <title>fedora</title>
       <link>http://www.forevergenin.com/tags/fedora/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -141,25 +42,7 @@
     </item>
     
     <item>
-      <title>Gradle</title>
-      <link>http://www.forevergenin.com/tags/gradle/</link>
-      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/gradle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>http://www.forevergenin.com/tags/java/</link>
-      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
+      <title>linux</title>
       <link>http://www.forevergenin.com/tags/linux/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -168,70 +51,7 @@
     </item>
     
     <item>
-      <title>Manga</title>
-      <link>http://www.forevergenin.com/tags/manga/</link>
-      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/manga/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Manhwa</title>
-      <link>http://www.forevergenin.com/tags/manhwa/</link>
-      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/manhwa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Maven</title>
-      <link>http://www.forevergenin.com/tags/maven/</link>
-      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/maven/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Naruto</title>
-      <link>http://www.forevergenin.com/tags/naruto/</link>
-      <pubDate>Tue, 04 Nov 2014 21:11:17 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/naruto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nsupdate</title>
-      <link>http://www.forevergenin.com/tags/nsupdate/</link>
-      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/nsupdate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Quotes</title>
-      <link>http://www.forevergenin.com/tags/quotes/</link>
-      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/quotes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rants</title>
-      <link>http://www.forevergenin.com/tags/rants/</link>
-      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/rants/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redhat</title>
+      <title>redhat</title>
       <link>http://www.forevergenin.com/tags/redhat/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -240,7 +60,7 @@
     </item>
     
     <item>
-      <title>Rootfs</title>
+      <title>rootfs</title>
       <link>http://www.forevergenin.com/tags/rootfs/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -249,7 +69,7 @@
     </item>
     
     <item>
-      <title>Rpm</title>
+      <title>rpm</title>
       <link>http://www.forevergenin.com/tags/rpm/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -258,16 +78,43 @@
     </item>
     
     <item>
-      <title>The Breakfast Club</title>
-      <link>http://www.forevergenin.com/tags/the-breakfast-club/</link>
-      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
+      <title>yum</title>
+      <link>http://www.forevergenin.com/tags/yum/</link>
+      <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/the-breakfast-club/</guid>
+      <guid>http://www.forevergenin.com/tags/yum/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ubuntu</title>
+      <title>chroot</title>
+      <link>http://www.forevergenin.com/tags/chroot/</link>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/chroot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debian</title>
+      <link>http://www.forevergenin.com/tags/debian/</link>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debootstrap</title>
+      <link>http://www.forevergenin.com/tags/debootstrap/</link>
+      <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/debootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
       <link>http://www.forevergenin.com/tags/ubuntu/</link>
       <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -276,11 +123,164 @@
     </item>
     
     <item>
-      <title>Yum</title>
-      <link>http://www.forevergenin.com/tags/yum/</link>
-      <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
+      <title>bind9</title>
+      <link>http://www.forevergenin.com/tags/bind9/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/tags/yum/</guid>
+      <guid>http://www.forevergenin.com/tags/bind9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>digg</title>
+      <link>http://www.forevergenin.com/tags/digg/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/digg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>http://www.forevergenin.com/tags/dns/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dnssec</title>
+      <link>http://www.forevergenin.com/tags/dnssec/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/dnssec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nsupdate</title>
+      <link>http://www.forevergenin.com/tags/nsupdate/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/nsupdate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>build</title>
+      <link>http://www.forevergenin.com/tags/build/</link>
+      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ant</title>
+      <link>http://www.forevergenin.com/tags/ant/</link>
+      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/ant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>http://www.forevergenin.com/tags/development/</link>
+      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gradle</title>
+      <link>http://www.forevergenin.com/tags/gradle/</link>
+      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/gradle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>http://www.forevergenin.com/tags/java/</link>
+      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maven</title>
+      <link>http://www.forevergenin.com/tags/maven/</link>
+      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/maven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>addiction</title>
+      <link>http://www.forevergenin.com/tags/addiction/</link>
+      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/addiction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>manga</title>
+      <link>http://www.forevergenin.com/tags/manga/</link>
+      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/manga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>manhwa</title>
+      <link>http://www.forevergenin.com/tags/manhwa/</link>
+      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/manhwa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quotes</title>
+      <link>http://www.forevergenin.com/tags/quotes/</link>
+      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rants</title>
+      <link>http://www.forevergenin.com/tags/rants/</link>
+      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/rants/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>the breakfast club</title>
+      <link>http://www.forevergenin.com/tags/the-breakfast-club/</link>
+      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/the-breakfast-club/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>naruto</title>
+      <link>http://www.forevergenin.com/tags/naruto/</link>
+      <pubDate>Tue, 04 Nov 2014 21:11:17 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/tags/naruto/</guid>
       <description></description>
     </item>
     

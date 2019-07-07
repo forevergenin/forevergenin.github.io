@@ -9,58 +9,13 @@
     <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
     <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 13 Oct 2016 16:19:56 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 15:35:45 +0530</lastBuildDate>
     
 	<atom:link href="http://www.forevergenin.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Autoconf</title>
-      <link>http://www.forevergenin.com/categories/autoconf/</link>
-      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/autoconf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Automake</title>
-      <link>http://www.forevergenin.com/categories/automake/</link>
-      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/automake/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Build</title>
-      <link>http://www.forevergenin.com/categories/build/</link>
-      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/build/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cross Compilation</title>
-      <link>http://www.forevergenin.com/categories/cross-compilation/</link>
-      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/cross-compilation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>http://www.forevergenin.com/categories/java/</link>
-      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
+      <title>linux</title>
       <link>http://www.forevergenin.com/categories/linux/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -69,52 +24,7 @@
     </item>
     
     <item>
-      <title>Manga</title>
-      <link>http://www.forevergenin.com/categories/manga/</link>
-      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/manga/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networking</title>
-      <link>http://www.forevergenin.com/categories/networking/</link>
-      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pkg Config</title>
-      <link>http://www.forevergenin.com/categories/pkg-config/</link>
-      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/pkg-config/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Quotes</title>
-      <link>http://www.forevergenin.com/categories/quotes/</link>
-      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/quotes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rants</title>
-      <link>http://www.forevergenin.com/categories/rants/</link>
-      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/rants/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rootfs</title>
+      <title>rootfs</title>
       <link>http://www.forevergenin.com/categories/rootfs/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
@@ -123,11 +33,101 @@
     </item>
     
     <item>
-      <title>Sysroot</title>
+      <title>networking</title>
+      <link>http://www.forevergenin.com/categories/networking/</link>
+      <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>autoconf</title>
+      <link>http://www.forevergenin.com/categories/autoconf/</link>
+      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/autoconf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automake</title>
+      <link>http://www.forevergenin.com/categories/automake/</link>
+      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/automake/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>build</title>
+      <link>http://www.forevergenin.com/categories/build/</link>
+      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cross compilation</title>
+      <link>http://www.forevergenin.com/categories/cross-compilation/</link>
+      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/cross-compilation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pkg-config</title>
+      <link>http://www.forevergenin.com/categories/pkg-config/</link>
+      <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/pkg-config/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sysroot</title>
       <link>http://www.forevergenin.com/categories/sysroot/</link>
       <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/categories/sysroot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>http://www.forevergenin.com/categories/java/</link>
+      <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>manga</title>
+      <link>http://www.forevergenin.com/categories/manga/</link>
+      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/manga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quotes</title>
+      <link>http://www.forevergenin.com/categories/quotes/</link>
+      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rants</title>
+      <link>http://www.forevergenin.com/categories/rants/</link>
+      <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/rants/</guid>
       <description></description>
     </item>
     
