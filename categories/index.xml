@@ -114,15 +114,6 @@
     </item>
     
     <item>
-      <title>manga</title>
-      <link>http://www.forevergenin.com/categories/manga/</link>
-      <pubDate>Sat, 09 May 2015 14:19:04 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/categories/manga/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>quotes</title>
       <link>http://www.forevergenin.com/categories/quotes/</link>
       <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
@@ -137,6 +128,15 @@
       <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/categories/rants/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>manga</title>
+      <link>http://www.forevergenin.com/categories/manga/</link>
+      <pubDate>Tue, 04 Nov 2014 21:11:17 +0530</pubDate>
+      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
+      <guid>http://www.forevergenin.com/categories/manga/</guid>
       <description></description>
     </item>
     

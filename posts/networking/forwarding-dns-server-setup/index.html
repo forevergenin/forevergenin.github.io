@@ -25,7 +25,7 @@ Prerequisites  A VM running Ubuntu …">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="forevergenin" />
 
-  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="generator" content="Hugo 0.57.2" />
   <link rel="canonical" href="http://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/" />
   <link rel="alternate" href="http://www.forevergenin.com/index.xml" type="application/rss+xml" title="forevergenin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -135,17 +135,6 @@ if (!doNotTrack) {
             </li>
           
         
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">personal</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.forevergenin.com/pages/my-manga-tracking-list">my manga tracking list</a>
-                
-              </div>
-            </li>
-          
-        
 
         
 
@@ -244,7 +233,8 @@ if (!doNotTrack) {
 
 <p>For our example we are going to use the below network configuration on the VM running the DNS service. The below gist represents the <code>/etc/network/interfaces</code> file from our VM which is going to run the DNS service.</p>
 
-<script type="application/javascript" src="//gist.github.com/anonymous/2b69e40b069d9096395eb29345e35b7c.js"></script>
+<script type="application/javascript" src="https://gist.github.com/anonymous/2b69e40b069d9096395eb29345e35b7c.js"></script>
+
 
 <h2 id="dns-service-setup">DNS service setup</h2>
 
@@ -268,14 +258,17 @@ if (!doNotTrack) {
 
 <p>If you <code>cat</code> the above listed files you should see entries like the following two.</p>
 
-<p><script type="application/javascript" src="//gist.github.com/anonymous/968faaacebde47edfde560633e4c66a3.js"></script>
-<script type="application/javascript" src="//gist.github.com/anonymous/c07ad13b6e31ae475b42881b2790b2a9.js"></script></p>
+<p><script type="application/javascript" src="https://gist.github.com/anonymous/968faaacebde47edfde560633e4c66a3.js"></script>
+
+<script type="application/javascript" src="https://gist.github.com/anonymous/c07ad13b6e31ae475b42881b2790b2a9.js"></script>
+</p>
 
 <p>Backup of these files in a safe location. They are required in case you need to communicated with you DNS server via <code>nsupdate</code> in the future.</p>
 
 <p>Second we will create a new <code>db</code> for the domain <code>dev.lab</code>. This files needs to be placed at <code>/etc/bind/db.dev.lab</code> with the exact same file name. The content of the file looks similiar to the one below. If you closely observe line numbers 15 to 17 you will see two <code>CNAME</code> entries and on <code>A</code> entry. Both <code>dns</code> and <code>ntp</code> entries are pointing to <code>ns</code> entry because we are planing to run both NTP and DNS services on the same machine.</p>
 
-<script type="application/javascript" src="//gist.github.com/anonymous/e3a83444adcc1cf133f9cb643aaa6b2c.js"></script>
+<script type="application/javascript" src="https://gist.github.com/anonymous/e3a83444adcc1cf133f9cb643aaa6b2c.js"></script>
+
 
 <p>After creating <code>/etc/bind/db.dev.lab</code> file make a softlink for the file <code>/etc/bind/db.dev.lab</code> inside <code>/var/cache/bind</code>.</p>
 
@@ -284,15 +277,18 @@ if (!doNotTrack) {
 
 <p>As third step, we will configure the TSIG key and the bind it to the domain name <code>dev.lab</code> via <code>zone</code> entry. Create file <code>/etc/bind/dev-lab.key</code> with same content as shown in the next gist. Note that the line number 3 contains the TSIG key value which we generated previously.</p>
 
-<script type="application/javascript" src="//gist.github.com/anonymous/c2d1f285fb04a5d53909240da086a7a8.js"></script>
+<script type="application/javascript" src="https://gist.github.com/anonymous/c2d1f285fb04a5d53909240da086a7a8.js"></script>
+
 
 <p>Now append the below configuration to the <code>/etc/bind/named.conf.local</code> to bind the TSIG key and <code>dev.lab</code> domain. The <code>zone</code> entry basically lists where is the <code>db</code> file for <code>dev.lab</code> domain is located and which key to use for authenticating while modifying the entries for the domain <code>dev.lab</code> dynamically.</p>
 
-<script type="application/javascript" src="//gist.github.com/anonymous/2823dce299163e8ffe798889f49420ac.js"></script>
+<script type="application/javascript" src="https://gist.github.com/anonymous/2823dce299163e8ffe798889f49420ac.js"></script>
+
 
 <p>And for the final step, we will configure the forward DNS server entries in case our DNS server could&rsquo;t resolve a particular domain request. For this we need to add <code>forwarders</code> block to <code>/etc/bind/named.conf.options</code> file. Note the line numbers 13 to 16.</p>
 
-<script type="application/javascript" src="//gist.github.com/anonymous/05b1f6e52d92ce8cb547bca3665abeb2.js"></script>
+<script type="application/javascript" src="https://gist.github.com/anonymous/05b1f6e52d92ce8cb547bca3665abeb2.js"></script>
+
 
 <p>By default <code>bind</code> listens only on <code>127.0.0.1</code>. But for our use case we need this server to be accessible from all the clients connected to <code>192.168.1.0/24</code> subnet. For this you need to add our VM&rsquo;s ip address to the <code>listen</code> block (line number 32). Now if you want your DNS server to serve DNS requests from clients connected to network other than <code>192.168.1.0/24</code> google for how to configure and use <code>allow-query</code> / <code>allow-query-cache</code> blocks.</p>
 
@@ -565,7 +561,7 @@ m.gtld-servers.net.	125906	IN	AAAA	2001:501:b1f9::30
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.55.6</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.57.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
