@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>debian on forevergenin</title>
@@ -9,11 +9,7 @@
     <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
     <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 20 Sep 2017 14:17:48 +0530</lastBuildDate>
-    
-	<atom:link href="http://www.forevergenin.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 20 Sep 2017 14:17:48 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bootstrapping a debian rootfs for use with chroots/containers</title>
       <link>http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</link>
@@ -21,8 +17,7 @@
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</guid>
       <description>The aim this time is to setup a base rootfs for Ubuntu/Debian distro which can be used for setting up a chroot jail or to create a docker container base image. This blog is based on a earlier blog which I have written but forgot to publish around June, 2012.
- The below mentioned steps are validated on Fedora 25 Workstation installation.  
-For setting up a debian based rootfs we need a tool called debootstrap.</description>
+ The below mentioned steps are validated on Fedora 25 Workstation installation.  For setting up a debian based rootfs we need a tool called debootstrap.</description>
     </item>
     
   </channel>

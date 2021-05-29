@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>maven on forevergenin</title>
@@ -9,11 +9,7 @@
     <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
     <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 01 Jun 2016 13:54:56 +0530</lastBuildDate>
-    
-	<atom:link href="http://www.forevergenin.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 01 Jun 2016 13:54:56 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Distro independent Java development environment setup</title>
       <link>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</link>

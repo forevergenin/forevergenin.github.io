@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>redhat on forevergenin</title>
@@ -9,11 +9,7 @@
     <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
     <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 16 Nov 2017 15:35:45 +0530</lastBuildDate>
-    
-	<atom:link href="http://www.forevergenin.com/tags/redhat/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 16 Nov 2017 15:35:45 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/tags/redhat/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bootstrapping CentOS rootfs for use with chroots/containers</title>
       <link>http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</link>
@@ -21,8 +17,7 @@
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</guid>
       <description>We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
- The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  
-Lets get started As usual the first step, install the required dependecy packages which in our case is yum.</description>
+ The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.</description>
     </item>
     
   </channel>

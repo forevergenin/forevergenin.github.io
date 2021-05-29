@@ -22,7 +22,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="forevergenin" />
 
-  <meta name="generator" content="Hugo 0.58.1" />
+  <meta name="generator" content="Hugo 0.83.1" />
   <link rel="canonical" href="http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/" />
   <link rel="alternate" href="http://www.forevergenin.com/index.xml" type="application/rss+xml" title="forevergenin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -177,7 +177,7 @@ if (!doNotTrack) {
                 
                 
                   <span class="post-meta">
-  Posted on June 1, 2016
+  
   
 </span>
 
@@ -197,24 +197,17 @@ if (!doNotTrack) {
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as <a href="https://help.ubuntu.com/community/Repositories/Ubuntu#Adding_Canonical_Partner_Repositories" title="Canonical Partner Repositories">Canonical&rsquo;s partner repository</a> ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default. Setting up Java development environment manually from scratch on linux has become a tedious job (though still easier doing tha on Microsoft Windows). Nowadays I avoid doing it, given a chance to use a preconfigured virtual machines or chroot tar balls  - created specifically for development/build requirements.</p>
-
 <p>As for the intent of this post, it is to serve as a guide on best practices of setting up a Java development / build environment from scratch if such need arises in the future.</p>
-
 <p><strong>Prerequisites:</strong></p>
-
 <ol>
-<li>Oracle JDK version of your choice (in our case v1.7.0<em>79</em>)</li>
+<li>Oracle JDK version of your choice (in our case v1.7.0_79_)</li>
 <li>Apache Ant version of your choice (in our case 1.9.7) )which works with the JDK version chosen in step 1</li>
 <li>Apache Maven version of your choice (in our case 3.0.5) which works with the JDK version chosen in step 1</li>
 <li>Gradle version of your choice (in our case 2.13) which works with the JDK version chosen in step 1</li>
 </ol>
-
 <p>Download tar ball archives of all the above packages. RPM package is available for Oracle JDK but it kills the &ldquo;distro independent&rdquo; part of this post.</p>
-
 <p>Extract all the tar balls to a location of your convenience. If I have root or sudo access (which happens to be most of the time), I usually prefer <code>/opt/tools/java</code>.</p>
-
 <p>After completing the extraction of tarballs to the <code>/opt/tools/java</code> direcory add the environment config scripts based on the below given template to <code>/etc/profile.d</code> directory of you linux file system.</p>
-
 <p><script type="application/javascript" src="https://gist.github.com/anonymous/100de458dd906e902f02315880e3d09d.js"></script>
 
 <script type="application/javascript" src="https://gist.github.com/anonymous/db317ace4c4e121c96b1c5db9f3fa484.js"></script>
@@ -223,25 +216,19 @@ if (!doNotTrack) {
 
 <script type="application/javascript" src="https://gist.github.com/anonymous/c8cb2dd354772630389d0829564c1190.js"></script>
 </p>
-
 <p>At the end of the setup, your <code>/etc/profile.d</code> directory should look something like this</p>
-
-<pre><code class="language-bash">/etc/profile.d
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/etc/profile.d
 ├── 00700_java_home.sh
 ├── 00701_ant_home.sh
 ├── 00702_m2_home.sh
 └── 00703_gradle_home.sh
-</code></pre>
-
-<p>And your <code>/opt/tools/java</code> should look something like this</p>
-
-<pre><code class="language-bash">/opt/tools/java
+</code></pre></div><p>And your <code>/opt/tools/java</code> should look something like this</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/opt/tools/java
 ├── apache-ant-1.9.7
 ├── apache-maven-3.0.5
 ├── gradle-2.13
 └── jdk1.7.0_79
-</code></pre>
-
+</code></pre></div>
       </article>
 
       <ul class="pager blog-pager">
@@ -355,7 +342,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.58.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.83.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

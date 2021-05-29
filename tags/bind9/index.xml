@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bind9 on forevergenin</title>
@@ -9,11 +9,7 @@
     <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
     <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
     <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 22 Aug 2017 23:22:56 +0530</lastBuildDate>
-    
-	<atom:link href="http://www.forevergenin.com/tags/bind9/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 22 Aug 2017 23:22:56 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/tags/bind9/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Forwarding DNS server on Ubuntu 16.04</title>
       <link>http://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/</link>
@@ -21,7 +17,7 @@
       <author>hello@forevergenin.com (Premkumar Subramanian)</author>
       <guid>http://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/</guid>
       <description>Goal We are looking to setup up a minimal forwarding DNS server on Ubuntu 16.04. After that we will see how to use nsupdate and dig to verify our configuration.
-Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root access for the VM  External DNS server information  We are going to use google&amp;rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&amp;rsquo;t be resolved by our DNS server it will forward the request to the external server.</description>
+Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root access for the VM   External DNS server information  We are going to use google&amp;rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&amp;rsquo;t be resolved by our DNS server it will forward the request to the external server.</description>
     </item>
     
   </channel>

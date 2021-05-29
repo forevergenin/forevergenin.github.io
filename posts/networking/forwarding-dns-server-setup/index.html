@@ -9,9 +9,9 @@
   <meta property="og:title" content="Forwarding DNS server on Ubuntu 16.04" />
   <meta name="twitter:title" content="Forwarding DNS server on Ubuntu 16.04" />
   <meta name="description" content="Goal We are looking to setup up a minimal forwarding DNS server on Ubuntu 16.04. After that we will see how to use nsupdate and dig to verify our configuration.
-Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root access for the VM  External DNS server information  We are going to use google&rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&rsquo;t be resolved by our DNS server it will forward the request to the external server.">
+Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root access for the VM   External DNS server information  We are going to use google&rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&rsquo;t be resolved by our DNS server it will forward the request to the external server.">
   <meta property="og:description" content="Goal We are looking to setup up a minimal forwarding DNS server on Ubuntu 16.04. After that we will see how to use nsupdate and dig to verify our configuration.
-Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root access for the VM  External DNS server information  We are going to use google&rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&rsquo;t be resolved by our DNS server it will forward the request to the external server.">
+Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root access for the VM   External DNS server information  We are going to use google&rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&rsquo;t be resolved by our DNS server it will forward the request to the external server.">
   <meta name="twitter:description" content="Goal We are looking to setup up a minimal forwarding DNS server on Ubuntu 16.04. After that we will see how to use nsupdate and dig to verify our configuration.
 Prerequisites  A VM running Ubuntu …">
   <meta name="author" content="Premkumar Subramanian"/>
@@ -25,7 +25,7 @@ Prerequisites  A VM running Ubuntu …">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="forevergenin" />
 
-  <meta name="generator" content="Hugo 0.58.1" />
+  <meta name="generator" content="Hugo 0.83.1" />
   <link rel="canonical" href="http://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/" />
   <link rel="alternate" href="http://www.forevergenin.com/index.xml" type="application/rss+xml" title="forevergenin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -180,7 +180,7 @@ if (!doNotTrack) {
                 
                 
                   <span class="post-meta">
-  Posted on August 22, 2017
+  
   
 </span>
 
@@ -199,199 +199,140 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<h2 id="goal">Goal</h2>
-
+        <h2 id="goal">Goal</h2>
 <p>We are looking to setup up a minimal forwarding DNS server on Ubuntu 16.04. After that we will see how to use <code>nsupdate</code> and <code>dig</code> to verify our configuration.</p>
-
 <h2 id="prerequisites">Prerequisites</h2>
-
 <ul>
 <li>A VM running Ubuntu 16.04 with BIND installed
-
 <ul>
 <li>You need <code>root</code> access for the VM</li>
-</ul></li>
+</ul>
+</li>
 <li>External DNS server information
-
 <ul>
 <li>We are going to use google&rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&rsquo;t be resolved by our DNS server it will forward the request to the external server.</li>
-</ul></li>
+</ul>
+</li>
 <li>Domain information
-
 <ul>
 <li>We need to know the domain topology we want our DNS server to manage. In this tutorial we are going to manage <code>dev.lab</code> domain using our DNS server</li>
-</ul></li>
+</ul>
+</li>
 <li>Network information (optional)
-
 <ul>
 <li>We need to know the network topology we which  to use as part of our setup. For this example we will use a simple Class C network 192.168.1.0/24</li>
-</ul></li>
+</ul>
+</li>
 <li>Optionally you can setup a reverse DNS resolution but we are not going todo that today</li>
 </ul>
-
 <p>For our example we are going to use the below network configuration on the VM running the DNS service. The below gist represents the <code>/etc/network/interfaces</code> file from our VM which is going to run the DNS service.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/2b69e40b069d9096395eb29345e35b7c.js"></script>
 
-
 <h2 id="dns-service-setup">DNS service setup</h2>
-
 <p>We can install <code>bind</code> by running the following command from the termial.</p>
-
-<pre><code class="language-bash">apt install bind9
-</code></pre>
-
-<p>After installing <code>bind</code> we need configure the below listed files to make setup our domain <code>dev.lab</code>.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">apt install bind9
+</code></pre></div><p>After installing <code>bind</code> we need configure the below listed files to make setup our domain <code>dev.lab</code>.</p>
 <p>First we will generate TSIG key for our domain by running the below command. These keys are required if you need to update your DNS records dynamicaly using a tool such as <code>nsupdate</code>. We will see the details in the later section.</p>
-
-<pre><code class="language-bash">dnssec-keygen -a HMAC-MD5 -b 128 -n HOST dev.lab.
-</code></pre>
-
-<p>After you run above mentioned command you should see two new files with names similiar to the ones listed below when you run <code>ls -l</code> command in your <code>pwd</code>.</p>
-
-<pre><code class="language-bash">├── Kdev.lab.+157+08670.key
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dnssec-keygen -a HMAC-MD5 -b <span class="m">128</span> -n HOST dev.lab.
+</code></pre></div><p>After you run above mentioned command you should see two new files with names similiar to the ones listed below when you run <code>ls -l</code> command in your <code>pwd</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">├── Kdev.lab.+157+08670.key
 └── Kdev.lab.+157+08670.private
-</code></pre>
-
-<p>If you <code>cat</code> the above listed files you should see entries like the following two.</p>
-
+</code></pre></div><p>If you <code>cat</code> the above listed files you should see entries like the following two.</p>
 <p><script type="application/javascript" src="https://gist.github.com/anonymous/968faaacebde47edfde560633e4c66a3.js"></script>
 
 <script type="application/javascript" src="https://gist.github.com/anonymous/c07ad13b6e31ae475b42881b2790b2a9.js"></script>
 </p>
-
 <p>Backup of these files in a safe location. They are required in case you need to communicated with you DNS server via <code>nsupdate</code> in the future.</p>
-
 <p>Second we will create a new <code>db</code> for the domain <code>dev.lab</code>. This files needs to be placed at <code>/etc/bind/db.dev.lab</code> with the exact same file name. The content of the file looks similiar to the one below. If you closely observe line numbers 15 to 17 you will see two <code>CNAME</code> entries and on <code>A</code> entry. Both <code>dns</code> and <code>ntp</code> entries are pointing to <code>ns</code> entry because we are planing to run both NTP and DNS services on the same machine.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/e3a83444adcc1cf133f9cb643aaa6b2c.js"></script>
 
-
 <p>After creating <code>/etc/bind/db.dev.lab</code> file make a softlink for the file <code>/etc/bind/db.dev.lab</code> inside <code>/var/cache/bind</code>.</p>
-
-<pre><code class="language-bash">ln -s /etc/bind/db.dev.lab /var/cache/bind/db.dev.lab
-</code></pre>
-
-<p>As third step, we will configure the TSIG key and the bind it to the domain name <code>dev.lab</code> via <code>zone</code> entry. Create file <code>/etc/bind/dev-lab.key</code> with same content as shown in the next gist. Note that the line number 3 contains the TSIG key value which we generated previously.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ln -s /etc/bind/db.dev.lab /var/cache/bind/db.dev.lab
+</code></pre></div><p>As third step, we will configure the TSIG key and the bind it to the domain name <code>dev.lab</code> via <code>zone</code> entry. Create file <code>/etc/bind/dev-lab.key</code> with same content as shown in the next gist. Note that the line number 3 contains the TSIG key value which we generated previously.</p>
 <script type="application/javascript" src="https://gist.github.com/anonymous/c2d1f285fb04a5d53909240da086a7a8.js"></script>
 
-
 <p>Now append the below configuration to the <code>/etc/bind/named.conf.local</code> to bind the TSIG key and <code>dev.lab</code> domain. The <code>zone</code> entry basically lists where is the <code>db</code> file for <code>dev.lab</code> domain is located and which key to use for authenticating while modifying the entries for the domain <code>dev.lab</code> dynamically.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/2823dce299163e8ffe798889f49420ac.js"></script>
 
-
 <p>And for the final step, we will configure the forward DNS server entries in case our DNS server could&rsquo;t resolve a particular domain request. For this we need to add <code>forwarders</code> block to <code>/etc/bind/named.conf.options</code> file. Note the line numbers 13 to 16.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/05b1f6e52d92ce8cb547bca3665abeb2.js"></script>
 
-
 <p>By default <code>bind</code> listens only on <code>127.0.0.1</code>. But for our use case we need this server to be accessible from all the clients connected to <code>192.168.1.0/24</code> subnet. For this you need to add our VM&rsquo;s ip address to the <code>listen</code> block (line number 32). Now if you want your DNS server to serve DNS requests from clients connected to network other than <code>192.168.1.0/24</code> google for how to configure and use <code>allow-query</code> / <code>allow-query-cache</code> blocks.</p>
-
 <p>With this the configuration portion is complete for our domain <code>dev.lab</code>. To start/restart the DNS server run the below command.</p>
-
-<pre><code class="language-bash">systemctl restart bind9
-</code></pre>
-
-<p>You can get to know the status of the service by running <code>systemctl status bind9</code></p>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">systemctl restart bind9
+</code></pre></div><p>You can get to know the status of the service by running <code>systemctl status bind9</code></p>
 <h2 id="verifying-the-dns-setup">Verifying the DNS setup</h2>
-
 <p>We will see how to validate our DNS server is working as expected using two simple commands <code>nsupdate</code> and <code>dig</code>.</p>
-
 <h3 id="verifying-dns-domain-setup">Verifying DNS domain setup</h3>
-
 <p>We can verify our domain <code>dev.lab</code> is setup properly by adding and removing DNS entries.</p>
-
 <h4 id="adding-a-new-dns-entry">Adding a new DNS entry</h4>
-
 <p>To add a new DNS entry invoke <code>nsupdate</code> followed by below instruction. The below instructions add <code>nfs.dev.lab</code> as domain name to the ip address <code>192.168.1.2</code>.</p>
-
 <p>Note the key used in third line is the same TSIG key we generated and configured for our domain <code>dev.lab</code> in the above section.</p>
-
-<pre><code class="language-bash">debug yes
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">debug yes
 server 192.168.1.1
-key dev.lab 6wYwnp6Y8oyg4H6HGWc2pw==
-update add nfs.dev.lab 86400 a 192.168.128.2
+key dev.lab <span class="nv">6wYwnp6Y8oyg4H6HGWc2pw</span><span class="o">==</span>
+update add nfs.dev.lab <span class="m">86400</span> a 192.168.128.2
 send
-</code></pre>
-
-<h4 id="deleting-a-dns-entry">Deleting a DNS entry</h4>
-
+</code></pre></div><h4 id="deleting-a-dns-entry">Deleting a DNS entry</h4>
 <p>To remove an existing entry invoke <code>nsupdate</code> with following commands</p>
-
-<pre><code class="language-bash">debug yes
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">debug yes
 server 192.168.1.1
-key dev.lab 6wYwnp6Y8oyg4H6HGWc2pw==
-update delete nfs.dev.lab 86400 a 192.168.128.2
+key dev.lab <span class="nv">6wYwnp6Y8oyg4H6HGWc2pw</span><span class="o">==</span>
+update delete nfs.dev.lab <span class="m">86400</span> a 192.168.128.2
 send
-</code></pre>
-
-<p>We can mix match the use of <code>add</code> and <code>delete</code> statements. For example the below list of instructions for <code>nsupdate</code> is perfectly valid.</p>
-
-<pre><code class="language-bash">debug yes
+</code></pre></div><p>We can mix match the use of <code>add</code> and <code>delete</code> statements. For example the below list of instructions for <code>nsupdate</code> is perfectly valid.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">debug yes
 server 192.168.1.1
-key dev.lab 6wYwnp6Y8oyg4H6HGWc2pw==
-update add nfs.dev.lab 86400 a 192.168.128.2
-update delete nfs.dev.lab 86400 a 192.168.128.2
-update add nfs.dev.lab 86400 a 192.168.128.3
+key dev.lab <span class="nv">6wYwnp6Y8oyg4H6HGWc2pw</span><span class="o">==</span>
+update add nfs.dev.lab <span class="m">86400</span> a 192.168.128.2
+update delete nfs.dev.lab <span class="m">86400</span> a 192.168.128.2
+update add nfs.dev.lab <span class="m">86400</span> a 192.168.128.3
 send
-</code></pre>
-
-<h3 id="verifying-dns-entries-and-dns-forwarding">Verifying DNS entries and DNS forwarding</h3>
-
+</code></pre></div><h3 id="verifying-dns-entries-and-dns-forwarding">Verifying DNS entries and DNS forwarding</h3>
 <p>To verify a DNS entry added to the server execute <code>dig @192.168.1.1 nfs.dev.lab</code> and you should get an output similiar to the below one:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="p">;</span> &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; @192.168.1.1 nfs.dev.lab
+<span class="p">;</span> <span class="o">(</span><span class="m">1</span> server found<span class="o">)</span>
+<span class="p">;;</span> global options: +cmd
+<span class="p">;;</span> Got answer:
+<span class="p">;;</span> -&gt;&gt;HEADER<span class="s">&lt;&lt;- opco</span>de: QUERY, status: NOERROR, id: <span class="m">24342</span>
+<span class="p">;;</span> flags: qr aa rd ra<span class="p">;</span> QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: <span class="m">2</span>
 
-<pre><code class="language-bash">; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; @192.168.1.1 nfs.dev.lab
-; (1 server found)
-;; global options: +cmd
-;; Got answer:
-;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 24342
-;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 2
+<span class="p">;;</span> OPT PSEUDOSECTION:
+<span class="p">;</span> EDNS: version: 0, flags:<span class="p">;</span> udp: <span class="m">4096</span>
+<span class="p">;;</span> QUESTION SECTION:
+<span class="p">;</span>nfs.dev.lab.	IN	A
 
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 4096
-;; QUESTION SECTION:
-;nfs.dev.lab.	IN	A
+<span class="p">;;</span> ANSWER SECTION:
+nfs.dev.lab. <span class="m">86400</span> IN	A	192.168.128.2
 
-;; ANSWER SECTION:
-nfs.dev.lab. 86400 IN	A	192.168.128.2
-
-;; AUTHORITY SECTION:
+<span class="p">;;</span> AUTHORITY SECTION:
 dev.lab.		86400	IN	NS	ns.dev.lab.
 
-;; ADDITIONAL SECTION:
+<span class="p">;;</span> ADDITIONAL SECTION:
 ns.dev.lab.	86400	IN	A	192.168.1.1
 
-;; Query time: 0 msec
-;; SERVER: 192.168.1.1#53(192.168.1.1)
-;; WHEN: Tue Aug 22 23:10:16 IST 2017
-;; MSG SIZE  rcvd: 104
-</code></pre>
+<span class="p">;;</span> Query time: <span class="m">0</span> msec
+<span class="p">;;</span> SERVER: 192.168.1.1#53<span class="o">(</span>192.168.1.1<span class="o">)</span>
+<span class="p">;;</span> WHEN: Tue Aug <span class="m">22</span> 23:10:16 IST <span class="m">2017</span>
+<span class="p">;;</span> MSG SIZE  rcvd: <span class="m">104</span>
+</code></pre></div><p>To verify the forward DNS functionality execute the above command requesting an resolution to a domain other than <code>dev.lab</code>. For example, <code>dig @192.168.1.1 gitlab.com</code> should produce an output similiar to the below one.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="p">;</span> &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; @192.168.1.1 github.com
+<span class="p">;</span> <span class="o">(</span><span class="m">1</span> server found<span class="o">)</span>
+<span class="p">;;</span> global options: +cmd
+<span class="p">;;</span> Got answer:
+<span class="p">;;</span> -&gt;&gt;HEADER<span class="s">&lt;&lt;- opco</span>de: QUERY, status: NOERROR, id: <span class="m">44220</span>
+<span class="p">;;</span> flags: qr rd ra<span class="p">;</span> QUERY: 1, ANSWER: 2, AUTHORITY: 13, ADDITIONAL: <span class="m">26</span>
 
-<p>To verify the forward DNS functionality execute the above command requesting an resolution to a domain other than <code>dev.lab</code>. For example, <code>dig @192.168.1.1 gitlab.com</code> should produce an output similiar to the below one.</p>
+<span class="p">;;</span> OPT PSEUDOSECTION:
+<span class="p">;</span> EDNS: version: 0, flags:<span class="p">;</span> udp: <span class="m">4096</span>
+<span class="p">;;</span> QUESTION SECTION:
+<span class="p">;</span>github.com.			IN	A
 
-<pre><code class="language-bash">; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; @192.168.1.1 github.com
-; (1 server found)
-;; global options: +cmd
-;; Got answer:
-;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 44220
-;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 13, ADDITIONAL: 26
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 4096
-;; QUESTION SECTION:
-;github.com.			IN	A
-
-;; ANSWER SECTION:
+<span class="p">;;</span> ANSWER SECTION:
 github.com.		35	IN	A	192.30.255.112
 github.com.		35	IN	A	192.30.255.113
 
-;; AUTHORITY SECTION:
+<span class="p">;;</span> AUTHORITY SECTION:
 com.			45434	IN	NS	b.gtld-servers.net.
 com.			45434	IN	NS	d.gtld-servers.net.
 com.			45434	IN	NS	a.gtld-servers.net.
@@ -406,7 +347,7 @@ com.			45434	IN	NS	c.gtld-servers.net.
 com.			45434	IN	NS	i.gtld-servers.net.
 com.			45434	IN	NS	k.gtld-servers.net.
 
-;; ADDITIONAL SECTION:
+<span class="p">;;</span> ADDITIONAL SECTION:
 a.gtld-servers.net.	87848	IN	A	192.5.6.30
 a.gtld-servers.net.	87848	IN	AAAA	2001:503:a83e::2:30
 b.gtld-servers.net.	20034	IN	AAAA	2001:503:231d::2:30
@@ -433,14 +374,11 @@ l.gtld-servers.net.	109769	IN	AAAA	2001:500:d937::30
 m.gtld-servers.net.	127321	IN	A	192.55.83.30
 m.gtld-servers.net.	125906	IN	AAAA	2001:501:b1f9::30
 
-;; Query time: 44 msec
-;; SERVER: 192.168.1.1#53(192.168.1.1)
-;; WHEN: Tue Aug 22 23:12:23 IST 2017
-;; MSG SIZE  rcvd: 851
-</code></pre>
-
-<h2 id="references">References</h2>
-
+<span class="p">;;</span> Query time: <span class="m">44</span> msec
+<span class="p">;;</span> SERVER: 192.168.1.1#53<span class="o">(</span>192.168.1.1<span class="o">)</span>
+<span class="p">;;</span> WHEN: Tue Aug <span class="m">22</span> 23:12:23 IST <span class="m">2017</span>
+<span class="p">;;</span> MSG SIZE  rcvd: <span class="m">851</span>
+</code></pre></div><h2 id="references">References</h2>
 <ol>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-a-caching-or-forwarding-dns-server-on-ubuntu-14-04" title="How To Configure Bind as a Caching or Forwarding DNS Server on Ubuntu 14.04">How To Configure Bind as a Caching or Forwarding DNS Server on Ubuntu 14.04</a> - from Digital Ocean blog</li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-a-private-network-dns-server-on-ubuntu-14-04" title="How To Configure BIND as a Private Network DNS Server on Ubuntu 14.04">How To Configure BIND as a Private Network DNS Server on Ubuntu 14.04</a> - from Digital Ocean blog</li>
@@ -561,7 +499,7 @@ m.gtld-servers.net.	125906	IN	AAAA	2001:501:b1f9::30
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.58.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.83.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

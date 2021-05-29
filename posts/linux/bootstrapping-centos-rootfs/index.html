@@ -9,11 +9,9 @@
   <meta property="og:title" content="Bootstrapping CentOS rootfs for use with chroots/containers" />
   <meta name="twitter:title" content="Bootstrapping CentOS rootfs for use with chroots/containers" />
   <meta name="description" content="We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
- The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  
-Lets get started As usual the first step, install the required dependecy packages which in our case is yum.">
+ The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.">
   <meta property="og:description" content="We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
- The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  
-Lets get started As usual the first step, install the required dependecy packages which in our case is yum.">
+ The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.">
   <meta name="twitter:description" content="We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of …">
   <meta name="author" content="Premkumar Subramanian"/>
   <link href='http://www.forevergenin.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -26,7 +24,7 @@ Lets get started As usual the first step, install the required dependecy package
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="forevergenin" />
 
-  <meta name="generator" content="Hugo 0.58.1" />
+  <meta name="generator" content="Hugo 0.83.1" />
   <link rel="canonical" href="http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/" />
   <link rel="alternate" href="http://www.forevergenin.com/index.xml" type="application/rss+xml" title="forevergenin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -181,7 +179,7 @@ if (!doNotTrack) {
                 
                 
                   <span class="post-meta">
-  Posted on November 16, 2017
+  
   
 </span>
 
@@ -200,80 +198,50 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å</p>
-
-<p><span class="span-block label label-info"></p>
-
+        <p>We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å</p>
+<!-- raw HTML omitted -->
 <pre><code>    The below mentioned steps are validated on Ubuntu 17.10 desktop installation.
 </code></pre>
-
-<p></span></p>
-
+<!-- raw HTML omitted -->
 <h2 id="lets-get-started">Lets get started</h2>
-
 <p>As usual the first step, install the required dependecy packages which in our case is <code>yum</code>.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/d51bc5cd2e09a3d883257f7e03818207.js"></script>
 
-
 <p>Second, will prepare the required directory structure. In our example <code>~/work</code> will be our working directory and we will install the CentOS 7 roofs in inside of <code>work</code> in a directory named <code>centos7</code>.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/1f688f564a33c77480858f171c247793.js"></script>
 
-
 <p>Now we need to generate the <code>repo</code> metadata file for CentOS 7 installation. Below gist does the same.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/c79798791821cf4b44877cbc51494a12.js"></script>
 
-
 <p>Once we have our directory structure and the <code>repo</code> file prepared as mentioned above, we can bootstrap the CentOS 7 root by executing the below mentioned command. This creates a base rootfs with networking utilities and sudo command.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/a3c2e99f54bdfea6cae90db3a90f2643.js"></script>
 
-
 <p>After the <code>yum</code> installation is complete we need to prepare our rootfs for customization. We will start by mounting the required mount points to use <a href="https://manpages.debian.org/jessie/coreutils/chroot.8.en.html"><code>chroot</code></a>.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/51665cba55344d684ca76061cf47c9a4.js"></script>
 
-
 <p>Now we can start using the rootfs using <a href="https://manpages.debian.org/jessie/coreutils/chroot.8.en.html"><code>chroot</code></a> command. We will do the following customizations</p>
-
 <ol>
 <li>Setup <code>releasever</code> and <code>basearch</code> yum variables. Unfortunately this is required because of the <code>caveat</code> mentioned in <a href="#appendix-i">Appendix I</a>.</li>
 <li>Remove unncessary files like yum cache, locale definitions, temporary files, etc.</li>
 <li>Generate proper yum.conf, locale definition, build timestamp file and machine-id file - these are pretty standard stuff required for storage optimization in case we decide to use this rootfs for docker images</li>
 </ol>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/117cffa21b0aac1d256fc587013a0ade.js"></script>
 
-
 <p>After the rootfs configuration we need to umount all the mount points we mounted earlier. The unmount order is important here.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/1e688101b6f3d22a5299548295b71d39.js"></script>
 
-
 <p>We do one last cleanup before we package the rootfs as a tarball.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/9a3204cfa0e20ef808b7113826fa66eb.js"></script>
 
-
 <p>And the final piece, run the below command to generate the CentOS 7 rootfs tarball.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/c30c049d791a9421c4190b93da8666e2.js"></script>
 
-
 <h2 id="references">References</h2>
-
 <ol>
 <li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-using_yum_variables">Customizing <code>yum</code> variables</a></li>
 </ol>
-
 <h2 id="appendix-i">Appendix I</h2>
-
 <p>While running <code>yum</code> command inside of the CentOS 7 chroot I ran into below error message. Strangely this happens on Ubuntu host but not on CentOS host. As a fix I have created <code>yum</code> variables <code>releasever</code> and <code>basearch</code> inside the CentOS rootfs. Please check <a href="#references">Reference</a> section for the manual describing how to customize <code>yum</code> variables.</p>
-
 <script type="application/javascript" src="https://gist.github.com/anonymous/53b67925af9dfada0252fc4102a2a808.js"></script>
 
 
@@ -287,7 +255,7 @@ if (!doNotTrack) {
         
         
           <li class="next">
-            <a href="http://www.forevergenin.com/posts/life/life-lessons-101-memories/" data-toggle="tooltip" data-placement="top" title="Life Lessons 101 - Memories">Next Post &rarr;</a>
+            <a href="http://www.forevergenin.com/posts/life/lessons/101/memories/" data-toggle="tooltip" data-placement="top" title="Life Lessons 101 - Memories">Next Post &rarr;</a>
           </li>
         
       </ul>
@@ -390,7 +358,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.58.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.83.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
