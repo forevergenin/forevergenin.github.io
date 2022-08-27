@@ -2,22 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>manga on forevergenin</title>
-    <link>http://www.forevergenin.com/tags/manga/</link>
+    <link>https://www.forevergenin.com/tags/manga/</link>
     <description>Recent content in manga on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
-    <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
-    <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 04 Nov 2014 21:11:17 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/tags/manga/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Nov 2014 21:11:17 +0530</lastBuildDate><atom:link href="https://www.forevergenin.com/tags/manga/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Naruto comes to an end</title>
-      <link>http://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</link>
+      <link>https://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</link>
       <pubDate>Tue, 04 Nov 2014 21:11:17 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</guid>
+      
+      <guid>https://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</guid>
       <description>Finally, after much deliberation I have decided to spend some time on maintaining a personal blog (more about this decision later). Now the question is what should be my first post? Much like most of the decisions I have made in my life I left this one as well to randomness and I stumbled upon this article at Kotaku.
-Though it was my first manga, the truth is I was not worried much about the end.</description>
+Though it was my first manga, the truth is I was not worried much about the end. In fact I felt a sense of relief considering the recent decline in the quality of Naruto storyline. Good or bad, all things must come to an end.</description>
     </item>
     
   </channel>

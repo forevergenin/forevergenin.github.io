@@ -2,24 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>life on forevergenin</title>
-    <link>http://www.forevergenin.com/tags/life/</link>
+    <link>https://www.forevergenin.com/tags/life/</link>
     <description>Recent content in life on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
-    <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
-    <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 08 Jul 2019 01:00:00 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jul 2019 01:00:00 +0530</lastBuildDate><atom:link href="https://www.forevergenin.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Life Lessons 101 - Memories</title>
-      <link>http://www.forevergenin.com/posts/life/lessons/101/memories/</link>
+      <link>https://www.forevergenin.com/posts/life/lessons/101/memories/</link>
       <pubDate>Mon, 08 Jul 2019 01:00:00 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/life/lessons/101/memories/</guid>
+      
+      <guid>https://www.forevergenin.com/posts/life/lessons/101/memories/</guid>
       <description>I always wondered what leads to those lifelong friendships ?
 The answer seems to lie in memories.
 The foundation for any good friendship/relationship is built by memories shared between people. The memory can be a fun one or a boring one, but spending time and making that memory is vital.
-A boring memory is better than no memory at all. Those shared memories create the bond and more memories leads to a stronger bond.</description>
+A boring memory is better than no memory at all. Those shared memories create the bond and more memories leads to a stronger bond.
+The only catch is once you make them you can&amp;rsquo;t undo them. But that shouldn&amp;rsquo;t be the problem because, a boring memory is always better than no memory at all.</description>
     </item>
     
   </channel>

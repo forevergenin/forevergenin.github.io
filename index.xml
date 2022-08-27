@@ -2,92 +2,96 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>forevergenin</title>
-    <link>http://www.forevergenin.com/</link>
+    <link>https://www.forevergenin.com/</link>
     <description>Recent content on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
-    <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
-    <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 08 Jul 2019 01:00:00 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jul 2019 01:00:00 +0530</lastBuildDate><atom:link href="https://www.forevergenin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Life Lessons 101 - Memories</title>
-      <link>http://www.forevergenin.com/posts/life/lessons/101/memories/</link>
+      <link>https://www.forevergenin.com/posts/life/lessons/101/memories/</link>
       <pubDate>Mon, 08 Jul 2019 01:00:00 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/life/lessons/101/memories/</guid>
+      
+      <guid>https://www.forevergenin.com/posts/life/lessons/101/memories/</guid>
       <description>I always wondered what leads to those lifelong friendships ?
 The answer seems to lie in memories.
 The foundation for any good friendship/relationship is built by memories shared between people. The memory can be a fun one or a boring one, but spending time and making that memory is vital.
-A boring memory is better than no memory at all. Those shared memories create the bond and more memories leads to a stronger bond.</description>
+A boring memory is better than no memory at all. Those shared memories create the bond and more memories leads to a stronger bond.
+The only catch is once you make them you can&amp;rsquo;t undo them. But that shouldn&amp;rsquo;t be the problem because, a boring memory is always better than no memory at all.</description>
     </item>
     
     <item>
       <title>Bootstrapping CentOS rootfs for use with chroots/containers</title>
-      <link>http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</link>
+      <link>https://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</link>
       <pubDate>Thu, 16 Nov 2017 15:35:45 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</guid>
-      <description>We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
- The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.</description>
+      
+      <guid>https://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/</guid>
+      <description>We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.
+The below mentioned steps are validated on Ubuntu 17.10 desktop installation.
+Lets get started As usual the first step, install the required dependecy packages which in our case is yum.
+sudo apt install yum Second, will prepare the required directory structure. In our example ~/work will be our working directory and we will install the CentOS 7 roofs in inside of work in a directory named centos7.</description>
     </item>
     
     <item>
       <title>Bootstrapping a debian rootfs for use with chroots/containers</title>
-      <link>http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</link>
+      <link>https://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</link>
       <pubDate>Wed, 20 Sep 2017 14:17:48 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</guid>
+      
+      <guid>https://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/</guid>
       <description>The aim this time is to setup a base rootfs for Ubuntu/Debian distro which can be used for setting up a chroot jail or to create a docker container base image. This blog is based on a earlier blog which I have written but forgot to publish around June, 2012.
- The below mentioned steps are validated on Fedora 25 Workstation installation.  For setting up a debian based rootfs we need a tool called debootstrap.</description>
+The below mentioned steps are validated on Fedora 25 Workstation installation.
+For setting up a debian based rootfs we need a tool called debootstrap. It&amp;rsquo;s available as part of EPEL repository for Fedora and other Redhat based distros. Make sure to always install the latest version of debootstrap.
+sudo dnf install debootstrap To setup a base rootfs you need to decide on the version of debian distro (wheezy, jessie, buster), the target architecture (i386 or amd64) and what kind of variant you want to setup.</description>
     </item>
     
     <item>
       <title>Forwarding DNS server on Ubuntu 16.04</title>
-      <link>http://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/</link>
+      <link>https://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/</link>
       <pubDate>Tue, 22 Aug 2017 23:22:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/</guid>
+      
+      <guid>https://www.forevergenin.com/posts/networking/forwarding-dns-server-setup/</guid>
       <description>Goal We are looking to setup up a minimal forwarding DNS server on Ubuntu 16.04. After that we will see how to use nsupdate and dig to verify our configuration.
-Prerequisites  A VM running Ubuntu 16.04 with BIND installed  You need root access for the VM   External DNS server information  We are going to use google&amp;rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&amp;rsquo;t be resolved by our DNS server it will forward the request to the external server.</description>
+Prerequisites A VM running Ubuntu 16.04 with BIND installed You need root access for the VM External DNS server information We are going to use google&amp;rsquo;s DNS servers (8.8.8.8 and 8.8.4.4) as our external servers. In case a query can&amp;rsquo;t be resolved by our DNS server it will forward the request to the external server. Domain information We need to know the domain topology we want our DNS server to manage.</description>
     </item>
     
     <item>
       <title>Cross Compilation Checklist</title>
-      <link>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</link>
+      <link>https://www.forevergenin.com/posts/linux/cross-compilation-checklist/</link>
       <pubDate>Thu, 13 Oct 2016 16:19:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/linux/cross-compilation-checklist/</guid>
+      
+      <guid>https://www.forevergenin.com/posts/linux/cross-compilation-checklist/</guid>
       <description>This check-list tries to document the obvious, to reduce the time spent fixing toolchain related errors while cross compiling.
- Export the toolchain location to the PATH environment variable Set proper --sysroot for CFLAGS, CXXFLAGS and LDFLAGS Set proper PKG_CONFIG_SYSROOT_DIR, PKG_CONFIG_PATH and PKG_CONFIG_LIBDIR for pkg-config tool. This is important for build scripts which use pkg-config to determine the proper build flags.  Note: Use pkg-config = 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value  A sample configuration  Note : Need to update the post on how to cross compile packages which use autoconf tools  </description>
+Export the toolchain location to the PATH environment variable Set proper --sysroot for CFLAGS, CXXFLAGS and LDFLAGS Set proper PKG_CONFIG_SYSROOT_DIR, PKG_CONFIG_PATH and PKG_CONFIG_LIBDIR for pkg-config tool. This is important for build scripts which use pkg-config to determine the proper build flags. Note: Use pkg-config &amp;gt;= 0.26 . There is bug with previous versions of pkg-config which ignores the PKG_CONFIG_SYSROOT_DIR value
+A sample configuration export __CB_TOOLCHAIN_DIR=/opt/cross-toolchain export __CB_TOOLCHAIN_SYSROOT=${__CB_TOOLCHAIN_DIR}/sysroot export PATH=${__CB_TOOLCHAIN_DIR}/bin:${PATH} export PKG_CONFIG_SYSROOT_DIR=${__CB_TOOLCHAIN_SYSROOT} export PKG_CONFIG_PATH=${PKG_CONFIG_SYSROOT_DIR}/usr/lib/pkgconfig export PKG_CONFIG_LIBDIR=${PKG_CONFIG_SYSROOT_DIR}/usr/lib/pkgconfig export CFLAGS+=&amp;quot;--sysroot=${__CB_TOOLCHAIN_SYSROOT} &amp;quot; export CXXFLAGS+=&amp;quot;--sysroot=${__CB_TOOLCHAIN_SYSROOT} &amp;quot; export LDFLAGS+=&amp;quot;--sysroot=${__CB_TOOLCHAIN_SYSROOT} &amp;quot; #export PKG_CONFIG_DEBUG_SPEW=true # this one is for debugging pkg-config Note : Need to update the post on how to cross compile packages which use autoconf tools</description>
     </item>
     
     <item>
       <title>Distro independent Java development environment setup</title>
-      <link>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</link>
+      <link>https://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</guid>
-      <description>Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as Canonical&amp;rsquo;s partner repository ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default.</description>
+      
+      <guid>https://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</guid>
+      <description>Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as Canonical&amp;rsquo;s partner repository ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default. Setting up Java development environment manually from scratch on linux has become a tedious job (though still easier doing tha on Microsoft Windows). Nowadays I avoid doing it, given a chance to use a preconfigured virtual machines or chroot tar balls - created specifically for development/build requirements.</description>
     </item>
     
     <item>
       <title>The Breakfast Club</title>
-      <link>http://www.forevergenin.com/posts/rants/the-breakfast-club/</link>
+      <link>https://www.forevergenin.com/posts/rants/the-breakfast-club/</link>
       <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/rants/the-breakfast-club/</guid>
-      <description>Dear Mr. Vernon, we accept the fact that we had to sacrifice a whole Saturday in detention for whatever it was we did wrong. What we did was wrong. But we think you&amp;rsquo;re crazy to make us write an essay telling you who we think we are. You see us as you want to see us—in the simplest terms, in the most convenient definitions. But what we found out is that each one of us is a brain and an athlete and a basket case a princess and a criminal.</description>
+      
+      <guid>https://www.forevergenin.com/posts/rants/the-breakfast-club/</guid>
+      <description>Dear Mr. Vernon, we accept the fact that we had to sacrifice a whole Saturday in detention for whatever it was we did wrong. What we did was wrong. But we think you&amp;rsquo;re crazy to make us write an essay telling you who we think we are. You see us as you want to see us—in the simplest terms, in the most convenient definitions. But what we found out is that each one of us is a brain and an athlete and a basket case a princess and a criminal.
+Does that answer your question? Sincerely yours, the Breakfast Club.</description>
     </item>
     
     <item>
       <title>Naruto comes to an end</title>
-      <link>http://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</link>
+      <link>https://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</link>
       <pubDate>Tue, 04 Nov 2014 21:11:17 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</guid>
+      
+      <guid>https://www.forevergenin.com/posts/manga/naruto-comes-to-an-end/</guid>
       <description>Finally, after much deliberation I have decided to spend some time on maintaining a personal blog (more about this decision later). Now the question is what should be my first post? Much like most of the decisions I have made in my life I left this one as well to randomness and I stumbled upon this article at Kotaku.
-Though it was my first manga, the truth is I was not worried much about the end.</description>
+Though it was my first manga, the truth is I was not worried much about the end. In fact I felt a sense of relief considering the recent decline in the quality of Naruto storyline. Good or bad, all things must come to an end.</description>
     </item>
     
   </channel>

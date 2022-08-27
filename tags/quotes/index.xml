@@ -2,21 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>quotes on forevergenin</title>
-    <link>http://www.forevergenin.com/tags/quotes/</link>
+    <link>https://www.forevergenin.com/tags/quotes/</link>
     <description>Recent content in quotes on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
-    <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
-    <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 May 2015 00:12:40 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/tags/quotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 May 2015 00:12:40 +0530</lastBuildDate><atom:link href="https://www.forevergenin.com/tags/quotes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Breakfast Club</title>
-      <link>http://www.forevergenin.com/posts/rants/the-breakfast-club/</link>
+      <link>https://www.forevergenin.com/posts/rants/the-breakfast-club/</link>
       <pubDate>Sat, 09 May 2015 00:12:40 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/rants/the-breakfast-club/</guid>
-      <description>Dear Mr. Vernon, we accept the fact that we had to sacrifice a whole Saturday in detention for whatever it was we did wrong. What we did was wrong. But we think you&amp;rsquo;re crazy to make us write an essay telling you who we think we are. You see us as you want to see us—in the simplest terms, in the most convenient definitions. But what we found out is that each one of us is a brain and an athlete and a basket case a princess and a criminal.</description>
+      
+      <guid>https://www.forevergenin.com/posts/rants/the-breakfast-club/</guid>
+      <description>Dear Mr. Vernon, we accept the fact that we had to sacrifice a whole Saturday in detention for whatever it was we did wrong. What we did was wrong. But we think you&amp;rsquo;re crazy to make us write an essay telling you who we think we are. You see us as you want to see us—in the simplest terms, in the most convenient definitions. But what we found out is that each one of us is a brain and an athlete and a basket case a princess and a criminal.
+Does that answer your question? Sincerely yours, the Breakfast Club.</description>
     </item>
     
   </channel>

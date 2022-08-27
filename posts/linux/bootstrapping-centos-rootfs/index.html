@@ -1,385 +1,749 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Bootstrapping CentOS rootfs for use with chroots/containers</title>
-  <meta property="og:title" content="Bootstrapping CentOS rootfs for use with chroots/containers" />
-  <meta name="twitter:title" content="Bootstrapping CentOS rootfs for use with chroots/containers" />
-  <meta name="description" content="We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
- The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.">
-  <meta property="og:description" content="We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å
- The below mentioned steps are validated on Ubuntu 17.10 desktop installation.  Lets get started As usual the first step, install the required dependecy packages which in our case is yum.">
-  <meta name="twitter:description" content="We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of …">
-  <meta name="author" content="Premkumar Subramanian"/>
-  <link href='http://www.forevergenin.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="http://www.forevergenin.com/img/avatar-icon.png" />
-  <meta name="twitter:image" content="http://www.forevergenin.com/img/avatar-icon.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@forevergenin" />
-  <meta name="twitter:creator" content="@forevergenin" />
-  <meta property="og:url" content="http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="forevergenin" />
-
-  <meta name="generator" content="Hugo 0.83.1" />
-  <link rel="canonical" href="http://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/" />
-  <link rel="alternate" href="http://www.forevergenin.com/index.xml" type="application/rss+xml" title="forevergenin">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="http://www.forevergenin.com/css/main.css" />
-  <link rel="stylesheet" href="http://www.forevergenin.com/css/custom.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="http://www.forevergenin.com/css/pygment_highlights.css" />
-  <link rel="stylesheet" href="http://www.forevergenin.com/css/highlight.min.css" />
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
-
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
+<head>
     
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
-      
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-    </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
-</div>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.101.0" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-77041142-1', 'auto');
-	
-	ga('send', 'pageview');
-}
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/dsrkafuu/dsr-cdn-main@1/images/favicons/dsrca.ico" />
+
+
+
+<title>Bootstrapping CentOS rootfs for use with chroots/containers - forevergenin</title>
+
+
+<meta name="author" content="Premkumar Subramanian" />
+
+
+<meta name="description" content="A minimal Hugo theme with nice theme color." />
+
+
+<meta name="keywords" content="linux, rootfs, bootstrap, rpm, yum, redhat, centos, fedora" />
+
+
+<meta property="og:title" content="Bootstrapping CentOS rootfs for use with chroots/containers" />
+<meta name="twitter:title" content="Bootstrapping CentOS rootfs for use with chroots/containers" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/" /><meta property="og:description" content="We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.
+The below mentioned steps are validated on Ubuntu 17.10 desktop installation.
+Lets get started As usual the first step, install the required dependecy packages which in our case is yum.
+sudo apt install yum Second, will prepare the required directory structure. In our example ~/work will be our working directory and we will install the CentOS 7 roofs in inside of work in a directory named centos7." />
+<meta name="twitter:description" content="We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.
+The below mentioned steps are validated on Ubuntu 17.10 desktop installation.
+Lets get started As usual the first step, install the required dependecy packages which in our case is yum.
+sudo apt install yum Second, will prepare the required directory structure. In our example ~/work will be our working directory and we will install the CentOS 7 roofs in inside of work in a directory named centos7." /><meta property="og:image" content="https://www.forevergenin.com/img/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.forevergenin.com/img/og.png" /><meta property="article:published_time" content="2017-11-16T15:35:45+05:30" /><meta property="article:modified_time" content="2017-11-16T15:35:45+05:30" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://www.forevergenin.com/assets/css/fuji.min.css" />
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-77041142-1');
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77041142-1"></script>
+
+
+
+
 
 </head>
 
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://www.forevergenin.com/">forevergenin</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-          
-            <li>
-              <a title="home" href="http://www.forevergenin.com/">home</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="about" href="http://www.forevergenin.com/page/about/">about</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="tags" href="http://www.forevergenin.com/tags">tags</a>
-            </li>
-          
-        
-
-        
-
-        
-      </ul>
-    </div>
-
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        
-          <a title="forevergenin" href="http://www.forevergenin.com/">
-            <img class="avatar-img" src="http://www.forevergenin.com/img/avatar-icon.png" alt="forevergenin" />
-          </a>
-        
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-
-
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
     
-  
-  
-  
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
 
-
-
-
-  
-
-  <header class="header-section ">
-    
-    <div class="intro-header no-img">
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-heading">
-              <h1>Bootstrapping CentOS rootfs for use with chroots/containers</h1>
-                
-                
-                  <span class="post-meta">
-  
-  
-</span>
-
-
-                
-            </div>
-          </div>
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="https://www.forevergenin.com/">forevergenin</a>
+            
+            <span class="title-sub">little things in life matter</span>
+            
         </div>
-      </div>
     </div>
-  </header>
+</header>
 
-
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
     
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <p>We will see how to generate a rootfs tarball for redhat based system. Since we are targetting redhat based system, I am going to use debian based system (Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We will generate rootfs tarball for CentOS 7 64-bit.å</p>
-<!-- raw HTML omitted -->
-<pre><code>    The below mentioned steps are validated on Ubuntu 17.10 desktop installation.
-</code></pre>
-<!-- raw HTML omitted -->
+    <h2 class="post-item post-title">
+        <a href="https://www.forevergenin.com/posts/linux/bootstrapping-centos-rootfs/">Bootstrapping CentOS rootfs for use with chroots/containers</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-11-16</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;848 words</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/linux">linux</a>&nbsp;<a href="/tags/rootfs">rootfs</a>&nbsp;<a href="/tags/bootstrap">bootstrap</a>&nbsp;<a href="/tags/rpm">rpm</a>&nbsp;<a href="/tags/yum">yum</a>&nbsp;<a href="/tags/redhat">redhat</a>&nbsp;<a href="/tags/centos">centos</a>&nbsp;<a href="/tags/fedora">fedora</a>&nbsp;</span>
+
+    </div>
+    
+    <div class="post-content markdown-body">
+        <p>We will see how to generate a rootfs tarball for redhat based system. Since we
+are targetting redhat based system, I am going to use debian based system
+(Ubuntu 17.10 64-bit - latest at the time of writing this post) as my host. We
+will generate rootfs tarball for CentOS 7 64-bit.</p>
+<p><strong>The below mentioned steps are validated on Ubuntu 17.10 desktop
+installation.</strong></p>
 <h2 id="lets-get-started">Lets get started</h2>
-<p>As usual the first step, install the required dependecy packages which in our case is <code>yum</code>.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/d51bc5cd2e09a3d883257f7e03818207.js"></script>
+<p>As usual the first step, install the required dependecy packages which in our
+case is <code>yum</code>.</p>
+<pre><code class="language-bash">sudo apt install yum
+</code></pre>
+<p>Second, will prepare the required directory structure. In our example <code>~/work</code>
+will be our working directory and we will install the CentOS 7 roofs in inside
+of <code>work</code> in a directory named <code>centos7</code>.</p>
+<pre><code class="language-bash">export CENTOS\_BASE\_DIR=~/work
+export CENTOS\_ROOT\_DIR=${CENTOS\_BASE\_DIR}/centos7
 
-<p>Second, will prepare the required directory structure. In our example <code>~/work</code> will be our working directory and we will install the CentOS 7 roofs in inside of <code>work</code> in a directory named <code>centos7</code>.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/1f688f564a33c77480858f171c247793.js"></script>
+mkdir -p ${CENTOS\_ROOT\_DIR}
 
-<p>Now we need to generate the <code>repo</code> metadata file for CentOS 7 installation. Below gist does the same.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/c79798791821cf4b44877cbc51494a12.js"></script>
+cd ${CENTOS\_BASE\_DIR}
+</code></pre>
+<p>Now we need to generate the <code>repo</code> metadata file for CentOS 7 installation.
+Below code does the same.</p>
+<pre><code class="language-bash">cat &gt; ${CHROOT_BASE_DIR}/chroot-centos7.repo &lt;&lt; EOF
 
-<p>Once we have our directory structure and the <code>repo</code> file prepared as mentioned above, we can bootstrap the CentOS 7 root by executing the below mentioned command. This creates a base rootfs with networking utilities and sudo command.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/a3c2e99f54bdfea6cae90db3a90f2643.js"></script>
+[centos7-chroot-base]
+name=CentOS-7-Base
+baseurl=http://mirror.centos.org/centos/7/os/x86_64
+gpgcheck=0
 
-<p>After the <code>yum</code> installation is complete we need to prepare our rootfs for customization. We will start by mounting the required mount points to use <a href="https://manpages.debian.org/jessie/coreutils/chroot.8.en.html"><code>chroot</code></a>.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/51665cba55344d684ca76061cf47c9a4.js"></script>
+[centos7-chroot-epel]
+name=Extra Packages for Enterprise Linux 7
+baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64
+gpgcheck=0
 
-<p>Now we can start using the rootfs using <a href="https://manpages.debian.org/jessie/coreutils/chroot.8.en.html"><code>chroot</code></a> command. We will do the following customizations</p>
+EOF
+</code></pre>
+<p>Once we have our directory structure and the <code>repo</code> file prepared as mentioned
+above, we can bootstrap the CentOS 7 root by executing the below mentioned
+command. This creates a base rootfs with networking utilities and sudo command.</p>
+<pre><code class="language-bash">sudo yum -y -c chroot-centos7.repo --disablerepo=* \
+    --enablerepo=centos7-chroot-base \
+    --enablerepo=centos7-chroot-epel \
+    --disableplugin=* \
+    --installroot=${CHROOT_CENTOS7_BASE_DIR} install \
+	bash \
+	bash-completion \
+	vim-minimal \
+	yum \
+	iproute \
+	iputils \
+	rootfiles \
+	sudo
+</code></pre>
+<p>After the <code>yum</code> installation is complete we need to prepare our rootfs for
+customization. We will start by mounting the required mount points to use
+<a href="https://manpages.debian.org/jessie/coreutils/chroot.8.en.html" target="_blank"><code>chroot</code></a>.</p>
+<pre><code class="language-bash">sudo mount --bind /dev ${CHROOT_CENTOS7_BASE_DIR}/dev
+sudo mount --bind /dev/pts ${CHROOT_CENTOS7_BASE_DIR}/dev/pts
+sudo mount --bind /sys ${CHROOT_CENTOS7_BASE_DIR}/sys
+sudo mount --bind /proc ${CHROOT_CENTOS7_BASE_DIR}/proc
+sudo mount --bind /home ${CHROOT_CENTOS7_BASE_DIR}/home
+sudo cp /etc/resolv.conf ${CHROOT_CENTOS7_BASE_DIR}/etc/
+</code></pre>
+<p>Now we can start using the rootfs using <a href="https://manpages.debian.org/jessie/coreutils/chroot.8.en.html" target="_blank"><code>chroot</code></a> command. We will do the
+following customizations</p>
 <ol>
-<li>Setup <code>releasever</code> and <code>basearch</code> yum variables. Unfortunately this is required because of the <code>caveat</code> mentioned in <a href="#appendix-i">Appendix I</a>.</li>
+<li>Setup <code>releasever</code> and <code>basearch</code> yum variables. Unfortunately this is
+required because of the <code>caveat</code> mentioned in <a href="#appendix-i">Appendix I</a>.</li>
 <li>Remove unncessary files like yum cache, locale definitions, temporary files, etc.</li>
-<li>Generate proper yum.conf, locale definition, build timestamp file and machine-id file - these are pretty standard stuff required for storage optimization in case we decide to use this rootfs for docker images</li>
+<li>Generate proper yum.conf, locale definition, build timestamp file and
+machine-id file - these are pretty standard stuff required for storage
+optimization in case we decide to use this rootfs for docker images</li>
 </ol>
-<script type="application/javascript" src="https://gist.github.com/anonymous/117cffa21b0aac1d256fc587013a0ade.js"></script>
+<pre><code class="language-bash">sudo chroot ${CHROOT_CENTOS7_BASE_DIR}
 
-<p>After the rootfs configuration we need to umount all the mount points we mounted earlier. The unmount order is important here.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/1e688101b6f3d22a5299548295b71d39.js"></script>
+# Step no 1
 
+echo &quot;7&quot; &gt; /etc/yum/vars/releasever
+echo &quot;x86_64&quot; &gt; /etc/yum/vars/basearch
+
+# Step no 2
+yum clean all
+rm -rf /boot /var/cache/yum/* \
+    /tmp/ks-script* \
+    /var/log/* \
+    /tmp/* \
+    /etc/sysconfig/network-scripts/ifcfg-*
+
+###Optional for making the rootfs lean to be used as base container
+umount /run
+systemd-tmpfiles --create --boot
+rm -f /var/run/nologin
+
+# Step no 3
+echo 'container' &gt; /etc/yum/vars/infra
+
+awk '(NF==0&amp;&amp;!done){print &quot;override_install_langs='$LANG'\ntsflags=nodocs&quot;;done=1}{print}' \
+    &lt; /etc/yum.conf &gt; /etc/yum.conf.new
+mv /etc/yum.conf.new /etc/yum.conf
+
+rm -f /usr/lib/locale/locale-archive
+
+#Setup locale properly
+localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
+/bin/date +%Y%m%d_%H%M &gt; /etc/BUILDTIME
+
+:&gt; /etc/machine-id
+###End container
+</code></pre>
+<p>After the rootfs configuration we need to umount all the mount points we mounted
+earlier. The unmount order is important here.</p>
+<pre><code class="language-bash">sudo umount ${CHROOT_CENTOS7_BASE_DIR}/home
+sudo umount ${CHROOT_CENTOS7_BASE_DIR}/proc
+sudo umount ${CHROOT_CENTOS7_BASE_DIR}/sys
+sudo umount ${CHROOT_CENTOS7_BASE_DIR}/dev/pts
+sudo umount ${CHROOT_CENTOS7_BASE_DIR}/dev
+sudo rm ${CHROOT_CENTOS7_BASE_DIR}/etc/resolv.conf
+</code></pre>
 <p>We do one last cleanup before we package the rootfs as a tarball.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/9a3204cfa0e20ef808b7113826fa66eb.js"></script>
-
-<p>And the final piece, run the below command to generate the CentOS 7 rootfs tarball.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/c30c049d791a9421c4190b93da8666e2.js"></script>
-
+<pre><code class="language-bash">sudo rm -rf ${CHROOT_CENTOS7_BASE_DIR}/boot
+sudo rm -rf ${CHROOT_CENTOS7_BASE_DIR}/var/cache/yum/*
+sudo rm -f ${CHROOT_CENTOS7_BASE_DIR}/tmp/ks-script*
+sudo rm -rf ${CHROOT_CENTOS7_BASE_DIR}/var/log/*
+sudo rm -rf ${CHROOT_CENTOS7_BASE_DIR}/tmp/*
+sudo rm -rf ${CHROOT_CENTOS7_BASE_DIR}/etc/sysconfig/network-scripts/ifcfg-*
+</code></pre>
+<p>And the final piece, run the below command to generate the CentOS 7 rootfs
+tarball.</p>
+<pre><code class="language-bash">sudo tar --exclude=centos7/home \
+    --exclude=centos7/var/cache/yum/*  \
+    -Jcvf centos7.tar.xz centos7
+</code></pre>
 <h2 id="references">References</h2>
 <ol>
-<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-using_yum_variables">Customizing <code>yum</code> variables</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-using_yum_variables" target="_blank">Customizing <code>yum</code> variables</a></li>
 </ol>
 <h2 id="appendix-i">Appendix I</h2>
-<p>While running <code>yum</code> command inside of the CentOS 7 chroot I ran into below error message. Strangely this happens on Ubuntu host but not on CentOS host. As a fix I have created <code>yum</code> variables <code>releasever</code> and <code>basearch</code> inside the CentOS rootfs. Please check <a href="#references">Reference</a> section for the manual describing how to customize <code>yum</code> variables.</p>
-<script type="application/javascript" src="https://gist.github.com/anonymous/53b67925af9dfada0252fc4102a2a808.js"></script>
+<p>While running <code>yum</code> command inside of the CentOS 7 chroot I ran into below error
+message. Strangely this happens on Ubuntu host but not on CentOS host. As a fix
+I have created <code>yum</code> variables <code>releasever</code> and <code>basearch</code> inside the CentOS
+rootfs. Please check <a href="#references">Reference</a> section for the
+manual describing how to customize <code>yum</code> variables.</p>
+<pre><code class="language-bash">$ yum search yum
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
 
 
-      </article>
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work &quot;fix&quot; this:
 
-      <ul class="pager blog-pager">
-        
-          <li class="previous">
-            <a href="http://www.forevergenin.com/posts/linux/bootstrapping-debian-rootfs/" data-toggle="tooltip" data-placement="top" title="Bootstrapping a debian rootfs for use with chroots/containers">&larr; Previous Post</a>
-          </li>
-        
-        
-          <li class="next">
-            <a href="http://www.forevergenin.com/posts/life/lessons/101/memories/" data-toggle="tooltip" data-placement="top" title="Life Lessons 101 - Memories">Next Post &rarr;</a>
-          </li>
-        
-      </ul>
+     1. Contact the upstream for the repository and get them to fix the problem.
 
-      
-        
-      
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=&lt;repoid&gt; ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable &lt;repoid&gt;
+        or
+            subscription-manager repos --disable=&lt;repoid&gt;
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=&lt;repoid&gt;.skip_if_unavailable=true
+
+Cannot find a valid baseurl for repo: base/$releasever/x86_64
+$
+</code></pre>
 
     </div>
-  </div>
+</article>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/forevergenin" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="https://stackoverflow.com/users/2062000/forevergenin" target="_blank"><span>Stack Overflow</span></a>
+            </li>
+            
+            <li>
+                <a href="https://www.linkedin.com/in/forevergenin" target="_blank"><span>Linkedin</span></a>
+            </li>
+            
+            <li>
+                <a href="https://twitter.com/forevergenin" target="_blank"><span>Twitter</span></a>
+            </li>
+            
+            <li>
+                <a href="https://keybase.io/forevergenin" target="_blank"><span>Keybase</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/ant/">ant</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bind9/">bind9</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bootstrap/">bootstrap</a>
+            </span>
+            
+            <span>
+                <a href="/tags/build/">build</a>
+            </span>
+            
+            <span>
+                <a href="/tags/centos/">centos</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chroot/">chroot</a>
+            </span>
+            
+            <span>
+                <a href="/tags/debian/">debian</a>
+            </span>
+            
+            <span>
+                <a href="/tags/debootstrap/">debootstrap</a>
+            </span>
+            
+            <span>
+                <a href="/tags/development/">development</a>
+            </span>
+            
+            <span>
+                <a href="/tags/digg/">digg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/dns/">dns</a>
+            </span>
+            
+            <span>
+                <a href="/tags/dnssec/">dnssec</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fedora/">fedora</a>
+            </span>
+            
+            <span>
+                <a href="/tags/gradle/">gradle</a>
+            </span>
+            
+            <span>
+                <a href="/tags/java/">java</a>
+            </span>
+            
+            <span>
+                <a href="/tags/lessons/">lessons</a>
+            </span>
+            
+            <span>
+                <a href="/tags/life/">life</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/manga/">manga</a>
+            </span>
+            
+            <span>
+                <a href="/tags/maven/">maven</a>
+            </span>
+            
+            <span>
+                <a href="/tags/memories/">memories</a>
+            </span>
+            
+            <span>
+                <a href="/tags/naruto/">naruto</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nsupdate/">nsupdate</a>
+            </span>
+            
+            <span>
+                <a href="/tags/quotes/">quotes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rants/">rants</a>
+            </span>
+            
+            <span>
+                <a href="/tags/redhat/">redhat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rootfs/">rootfs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpm/">rpm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/the-breakfast-club/">the breakfast club</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ubuntu/">ubuntu</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yum/">yum</a>
+            </span>
+            
+        </div>
+    </div>
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#lets-get-started">Lets get started</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#appendix-i">Appendix I</a></li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
 </div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/forevergenin" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="https://stackoverflow.com/users/2062000/forevergenin" target="_blank"><span>Stack Overflow</span></a>
+            </li>
+            
+            <li>
+                <a href="https://www.linkedin.com/in/forevergenin" target="_blank"><span>Linkedin</span></a>
+            </li>
+            
+            <li>
+                <a href="https://twitter.com/forevergenin" target="_blank"><span>Twitter</span></a>
+            </li>
+            
+            <li>
+                <a href="https://keybase.io/forevergenin" target="_blank"><span>Keybase</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/ant/">ant</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bind9/">bind9</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bootstrap/">bootstrap</a>
+            </span>
+            
+            <span>
+                <a href="/tags/build/">build</a>
+            </span>
+            
+            <span>
+                <a href="/tags/centos/">centos</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chroot/">chroot</a>
+            </span>
+            
+            <span>
+                <a href="/tags/debian/">debian</a>
+            </span>
+            
+            <span>
+                <a href="/tags/debootstrap/">debootstrap</a>
+            </span>
+            
+            <span>
+                <a href="/tags/development/">development</a>
+            </span>
+            
+            <span>
+                <a href="/tags/digg/">digg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/dns/">dns</a>
+            </span>
+            
+            <span>
+                <a href="/tags/dnssec/">dnssec</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fedora/">fedora</a>
+            </span>
+            
+            <span>
+                <a href="/tags/gradle/">gradle</a>
+            </span>
+            
+            <span>
+                <a href="/tags/java/">java</a>
+            </span>
+            
+            <span>
+                <a href="/tags/lessons/">lessons</a>
+            </span>
+            
+            <span>
+                <a href="/tags/life/">life</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/manga/">manga</a>
+            </span>
+            
+            <span>
+                <a href="/tags/maven/">maven</a>
+            </span>
+            
+            <span>
+                <a href="/tags/memories/">memories</a>
+            </span>
+            
+            <span>
+                <a href="/tags/naruto/">naruto</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nsupdate/">nsupdate</a>
+            </span>
+            
+            <span>
+                <a href="/tags/quotes/">quotes</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rants/">rants</a>
+            </span>
+            
+            <span>
+                <a href="/tags/redhat/">redhat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rootfs/">rootfs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpm/">rpm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/the-breakfast-club/">the breakfast club</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ubuntu/">ubuntu</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yum/">yum</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#lets-get-started">Lets get started</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#appendix-i">Appendix I</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
 
     <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-              <li>
-                <a href="mailto:hello@forevergenin.com" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/forevergenin" title="GitHub">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://gitlab.com/forevergenin" title="GitLab">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/forevergenin" title="Twitter">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/forevergenin" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://stackoverflow.com/users/2062000/forevergenin" title="StackOverflow">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://keybase.io/forevergenin" title="Keybase">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-key fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-          
-          <li>
-            <a href="http://www.forevergenin.com/index.xml" title="RSS">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-        <p class="credits copyright text-muted">
-          
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
             
-              <a href="http://www.forevergenin.com/">Premkumar Subramanian</a>
-                      
-          
-          
-          &nbsp;&bull;&nbsp;
-          2019
-
-          
-            &nbsp;&bull;&nbsp;
-            <a href="http://www.forevergenin.com/">forevergenin</a>
-          
-        </p>
-        
-        <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.83.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
-          
-        </p>
-      </div>
+            <span>&copy; 2012-2022
+                <a href="https://www.forevergenin.com/">Premkumar Subramanian</a>
+                
+                | Powered by <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 
+            </span>
+        </div>
     </div>
-  </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="http://www.forevergenin.com/js/main.js"></script>
-<script src="http://www.forevergenin.com/js/highlight.min.js"></script>
-<script> hljs.initHighlightingOnLoad(); </script>
-<script> renderMathInElement(document.body); </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
-<script src="http://www.forevergenin.com/js/load-photoswipe.js"></script>
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
 
 
-  </body>
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+
+</body>
+
 </html>
-

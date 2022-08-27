@@ -2,21 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>maven on forevergenin</title>
-    <link>http://www.forevergenin.com/tags/maven/</link>
+    <link>https://www.forevergenin.com/tags/maven/</link>
     <description>Recent content in maven on forevergenin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@forevergenin.com (Premkumar Subramanian)</managingEditor>
-    <webMaster>hello@forevergenin.com (Premkumar Subramanian)</webMaster>
-    <copyright>Copyright (c) 2012 - 2017, Premkumar Subramanian; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 01 Jun 2016 13:54:56 +0530</lastBuildDate><atom:link href="http://www.forevergenin.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2016 13:54:56 +0530</lastBuildDate><atom:link href="https://www.forevergenin.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Distro independent Java development environment setup</title>
-      <link>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</link>
+      <link>https://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</link>
       <pubDate>Wed, 01 Jun 2016 13:54:56 +0530</pubDate>
-      <author>hello@forevergenin.com (Premkumar Subramanian)</author>
-      <guid>http://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</guid>
-      <description>Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as Canonical&amp;rsquo;s partner repository ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default.</description>
+      
+      <guid>https://www.forevergenin.com/posts/linux/distro-independent-java-development-environment-setup/</guid>
+      <description>Until few years back setting up Java development environment based on Sun/Oracle JDK was fairly a simple task. Since most of the linux distributions included Oracle/Sun JDK as part of their default package repository (here read as Canonical&amp;rsquo;s partner repository ;-)) it was as easy as installing any other core linux pacakge. But in recent times due to license restrictions Oracle JDK is not included in any of the linux distribution repositories by default. Setting up Java development environment manually from scratch on linux has become a tedious job (though still easier doing tha on Microsoft Windows). Nowadays I avoid doing it, given a chance to use a preconfigured virtual machines or chroot tar balls - created specifically for development/build requirements.</description>
     </item>
     
   </channel>
